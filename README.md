@@ -1,4 +1,4 @@
-# FilmGPT
+# KinoAgent
 
 app.py and backend.py have tools for my letterboxd and tmdb
 
