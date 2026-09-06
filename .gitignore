@@ -219,6 +219,6 @@ __marimo__/
 
 # sqlite database files
 *.db
-.sqlite3
+*.sqlite3
 
-/chroma_db/
+data/tmdb_processed_data/tmdb_cache.json
