@@ -1,0 +1,906 @@
+film_key,title,year,tmdb_id,tmdb_title,tmdb_release_date,match_status
+(500) days of summer:2009,(500) Days of Summer,2009,19913.0,(500) Days of Summer,2009-07-17,matched_exact_title_year
+12 angry men:1957,12 Angry Men,1957,389.0,12 Angry Men,1957-04-10,matched_exact_title_year
+12 years a slave:2013,12 Years a Slave,2013,76203.0,12 Years a Slave,2013-10-18,matched_exact_title_year
+1408:2007,1408,2007,3021.0,1408,2007-06-22,matched_exact_title_year
+1917:2019,1917,2019,530915.0,1917,2019-12-25,matched_exact_title_year
+2 fast 2 furious:2003,2 Fast 2 Furious,2003,584.0,2 Fast 2 Furious,2003-06-05,matched_exact_title_year
+2001: a space odyssey:1968,2001: A Space Odyssey,1968,62.0,2001: A Space Odyssey,1968-04-02,matched_exact_title_year
+2012:2009,2012,2009,14161.0,2012,2009-10-10,matched_exact_title_year
+21:2008,21,2008,8065.0,21,2008-03-27,matched_exact_title_year
+25th hour:2002,25th Hour,2002,1429.0,25th Hour,2002-12-19,matched_exact_title_year
+28 days later:2002,28 Days Later,2002,170.0,28 Days Later,2002-10-31,matched_exact_title_year
+3 idiots:2009,3 Idiots,2009,20453.0,3 Idiots,2009-12-23,matched_exact_title_year
+3 women:1977,3 Women,1977,41662.0,3 Women,1977-04-29,matched_exact_title_year
+300:2006,300,2006,1271.0,300,2007-03-07,matched_close_year
+50 first dates:2004,50 First Dates,2004,1824.0,50 First Dates,2004-02-13,matched_exact_title_year
+50/50:2011,50/50,2011,40807.0,50/50,2011-09-30,matched_exact_title_year
+7 khoon maaf:2011,7 Khoon Maaf,2011,56338.0,7 Khoon Maaf,2011-02-18,matched_exact_title_year
+8 mile:2002,8 Mile,2002,65.0,8 Mile,2002-11-08,matched_exact_title_year
+8:46:2020,8:46,2020,714842.0,8:46,2020-06-12,matched_exact_title_year
+a beautiful mind:2001,A Beautiful Mind,2001,453.0,A Beautiful Mind,2001-12-14,matched_exact_title_year
+a bronx tale:1993,A Bronx Tale,1993,1607.0,A Bronx Tale,1993-10-01,matched_exact_title_year
+a clockwork orange:1971,A Clockwork Orange,1971,185.0,A Clockwork Orange,1971-10-28,matched_exact_title_year
+a few good men:1992,A Few Good Men,1992,881.0,A Few Good Men,1992-12-11,matched_exact_title_year
+a ghost story:2017,A Ghost Story,2017,428449.0,A Ghost Story,2017-04-24,matched_exact_title_year
+a nightmare on elm street:1984,A Nightmare on Elm Street,1984,377.0,A Nightmare on Elm Street,1984-11-09,matched_exact_title_year
+a prophet:2009,A Prophet,2009,21575.0,A Prophet,2009-08-26,matched_exact_title_year
+a separation:2011,A Separation,2011,60243.0,A Separation,2011-02-15,matched_exact_title_year
+a serious man:2009,A Serious Man,2009,12573.0,A Serious Man,2009-10-02,matched_exact_title_year
+a star is born:2018,A Star Is Born,2018,332562.0,A Star Is Born,2018-10-03,matched_exact_title_year
+a time to kill:1996,A Time to Kill,1996,1645.0,A Time to Kill,1996-07-24,matched_exact_title_year
+a walk to remember:2002,A Walk to Remember,2002,10229.0,A Walk to Remember,2002-01-25,matched_exact_title_year
+a wednesday!:2008,A Wednesday!,2008,19703.0,A Wednesday!,2008-09-05,matched_exact_title_year
+a woman under the influence:1974,A Woman Under the Influence,1974,29845.0,A Woman Under the Influence,1974-11-18,matched_exact_title_year
+aankhen:2002,Aankhen,2002,21982.0,Aankhen,2002-03-27,matched_exact_title_year
+adaptation.:2002,Adaptation.,2002,2757.0,Adaptation.,2002-12-06,matched_exact_title_year
+adolescence:2025,Adolescence,2025,1478143.0,The Real Adolescence: Our Killer Kids,2025-05-08,needs_review
+after hours:1985,After Hours,1985,10843.0,After Hours,1985-09-13,matched_exact_title_year
+agora:2009,Agora,2009,26428.0,Agora,2009-05-17,matched_exact_title_year
+agra:2023,Agra,2023,1059007.0,Agra,2025-11-14,needs_review
+ajab prem ki ghazab kahani:2009,Ajab Prem Ki Ghazab Kahani,2009,24827.0,Ajab Prem Ki Ghazab Kahani,2009-11-06,matched_exact_title_year
+alice doesn't live here anymore:1974,Alice Doesn't Live Here Anymore,1974,16153.0,Alice Doesn't Live Here Anymore,1974-12-09,matched_exact_title_year
+alien:1979,Alien,1979,348.0,Alien,1979-05-25,matched_exact_title_year
+alita: battle angel:2019,Alita: Battle Angel,2019,399579.0,Alita: Battle Angel,2019-01-31,matched_exact_title_year
+all about eve:1950,All About Eve,1950,705.0,All About Eve,1950-11-09,matched_exact_title_year
+all about my mother:1999,All About My Mother,1999,99.0,All About My Mother,1999-04-16,matched_exact_title_year
+all quiet on the western front:2022,All Quiet on the Western Front,2022,49046.0,All Quiet on the Western Front,2022-10-07,matched_exact_title_year
+all that jazz:1979,All That Jazz,1979,16858.0,All That Jazz,1979-12-16,matched_exact_title_year
+all the president's men:1976,All the President's Men,1976,891.0,All the President's Men,1976-04-09,matched_exact_title_year
+almost famous:2000,Almost Famous,2000,786.0,Almost Famous,2000-09-15,matched_exact_title_year
+amadeus:1984,Amadeus,1984,279.0,Amadeus,1984-09-19,matched_exact_title_year
+american beauty:1999,American Beauty,1999,14.0,American Beauty,1999-09-15,matched_exact_title_year
+american gangster:2007,American Gangster,2007,4982.0,American Gangster,2007-11-02,matched_exact_title_year
+american history x:1998,American History X,1998,73.0,American History X,1998-07-01,matched_exact_title_year
+american hustle:2013,American Hustle,2013,168672.0,American Hustle,2013-12-03,matched_exact_title_year
+american pie:1999,American Pie,1999,2105.0,American Pie,1999-07-09,matched_exact_title_year
+american pie 2:2001,American Pie 2,2001,2770.0,American Pie 2,2001-08-10,matched_exact_title_year
+american pie presents: the book of love:2009,American Pie Presents: The Book of Love,2009,26123.0,American Pie Presents: The Book of Love,2009-12-02,matched_exact_title_year
+american pie presents: the naked mile:2006,American Pie Presents: The Naked Mile,2006,8275.0,American Pie Presents: The Naked Mile,2006-12-04,matched_exact_title_year
+american psycho:2000,American Psycho,2000,1359.0,American Psycho,2000-04-13,matched_exact_title_year
+american sniper:2014,American Sniper,2014,190859.0,American Sniper,2014-12-25,matched_exact_title_year
+amour:2012,Amour,2012,86837.0,Amour,2012-09-20,matched_exact_title_year
+anaconda:1997,Anaconda,1997,9360.0,Anaconda,1997-04-11,matched_exact_title_year
+anand:1971,Anand,1971,26237.0,Anand,1971-03-12,matched_exact_title_year
+anatomy of a fall:2023,Anatomy of a Fall,2023,915935.0,Anatomy of a Fall,2023-08-23,matched_exact_title_year
+anatomy of a murder:1959,Anatomy of a Murder,1959,93.0,Anatomy of a Murder,1959-07-01,matched_exact_title_year
+andrei rublev:1966,Andrei Rublev,1966,895.0,Andrei Rublev,1966-12-16,matched_exact_title_year
+ankhon dekhi:2013,Ankhon Dekhi,2013,241882.0,Ankhon Dekhi,2014-03-21,matched_close_year
+annie hall:1977,Annie Hall,1977,703.0,Annie Hall,1977-04-19,matched_exact_title_year
+anomalisa:2015,Anomalisa,2015,291270.0,Anomalisa,2015-12-30,matched_exact_title_year
+anora:2024,Anora,2024,1064213.0,Anora,2024-10-14,matched_exact_title_year
+another round:2020,Another Round,2020,580175.0,Another Round,2020-09-24,matched_exact_title_year
+anthony jeselnik: fire in the maternity ward:2019,Anthony Jeselnik: Fire in the Maternity Ward,2019,593489.0,Anthony Jeselnik: Fire in the Maternity Ward,2019-04-30,matched_exact_title_year
+antichrist:2009,Antichrist,2009,17609.0,Antichrist,2009-05-20,matched_exact_title_year
+aparajito:1956,Aparajito,1956,897.0,Aparajito,1956-10-11,matched_exact_title_year
+apocalypse now:1979,Apocalypse Now,1979,28.0,Apocalypse Now,1979-05-19,matched_exact_title_year
+apur sansar:1959,Apur Sansar,1959,896.0,The World of Apu,1959-05-01,needs_review
+argo:2012,Argo,2012,68734.0,Argo,2012-10-11,matched_exact_title_year
+ariel:1988,Ariel,1988,2.0,Ariel,1988-10-21,matched_exact_title_year
+arrival:2016,Arrival,2016,329865.0,Arrival,2016-11-10,matched_exact_title_year
+as good as it gets:1997,As Good as It Gets,1997,2898.0,As Good as It Gets,1997-12-19,matched_exact_title_year
+audition:1999,Audition,1999,11075.0,Audition,2000-03-03,matched_close_year
+autumn sonata:1978,Autumn Sonata,1978,12761.0,Autumn Sonata,1978-10-08,matched_exact_title_year
+avatar:2009,Avatar,2009,19995.0,Avatar,2009-12-16,matched_exact_title_year
+avengers: endgame:2019,Avengers: Endgame,2019,299534.0,Avengers: Endgame,2019-04-24,matched_exact_title_year
+avengers: infinity war:2018,Avengers: Infinity War,2018,299536.0,Avengers: Infinity War,2018-04-25,matched_exact_title_year
+awakenings:1990,Awakenings,1990,11005.0,Awakenings,1990-12-04,matched_exact_title_year
+babel:2006,Babel,2006,1164.0,Babel,2006-10-26,matched_exact_title_year
+baby driver:2017,Baby Driver,2017,339403.0,Baby Driver,2017-06-28,matched_exact_title_year
+baby's day out:1994,Baby's Day Out,1994,11212.0,Baby's Day Out,1994-07-01,matched_exact_title_year
+babylon:2022,Babylon,2022,615777.0,Babylon,2022-12-22,matched_exact_title_year
+back to the future:1985,Back to the Future,1985,105.0,Back to the Future,1985-07-03,matched_exact_title_year
+back to the future part iii:1990,Back to the Future Part III,1990,196.0,Back to the Future Part III,1990-05-25,matched_exact_title_year
+backrooms:2026,Backrooms,2026,1083381.0,Backrooms,2026-05-27,matched_exact_title_year
+bacurau:2019,Bacurau,2019,446159.0,Bacurau,2019-08-29,matched_exact_title_year
+badlapur:2015,Badlapur,2015,323517.0,Badlapur,2015-02-20,matched_exact_title_year
+bajrangi bhaijaan:2015,Bajrangi Bhaijaan,2015,348892.0,Bajrangi Bhaijaan,2015-07-17,matched_exact_title_year
+band of brothers:2001,Band of Brothers,2001,1335757.0,The Making of 'Band of Brothers',2001-09-09,needs_review
+bandit queen:1994,Bandit Queen,1994,14785.0,Bandit Queen,1994-01-26,matched_exact_title_year
+barry lyndon:1975,Barry Lyndon,1975,3175.0,Barry Lyndon,1975-12-16,matched_exact_title_year
+barton fink:1991,Barton Fink,1991,290.0,Barton Fink,1991-08-01,matched_exact_title_year
+basic instinct:1992,Basic Instinct,1992,402.0,Basic Instinct,1992-03-20,matched_exact_title_year
+batman begins:2005,Batman Begins,2005,272.0,Batman Begins,2005-06-10,matched_exact_title_year
+beau is afraid:2023,Beau Is Afraid,2023,798286.0,Beau Is Afraid,2023-04-14,matched_exact_title_year
+before midnight:2013,Before Midnight,2013,132344.0,Before Midnight,2013-04-05,matched_exact_title_year
+before sunrise:1995,Before Sunrise,1995,76.0,Before Sunrise,1995-01-27,matched_exact_title_year
+before sunset:2004,Before Sunset,2004,80.0,Before Sunset,2004-06-16,matched_exact_title_year
+before the devil knows you're dead:2007,Before the Devil Knows You're Dead,2007,7972.0,Before the Devil Knows You're Dead,2007-09-26,matched_exact_title_year
+being john malkovich:1999,Being John Malkovich,1999,492.0,Being John Malkovich,1999-10-29,matched_exact_title_year
+benny's video:1992,Benny's Video,1992,1987.0,Benny's Video,1992-11-06,matched_exact_title_year
+bhoothnath:2008,Bhoothnath,2008,15974.0,Bhoothnath,2008-05-09,matched_exact_title_year
+big fish:2003,Big Fish,2003,587.0,Big Fish,2003-12-10,matched_exact_title_year
+bird box:2018,Bird Box,2018,405774.0,Bird Box,2018-12-13,matched_exact_title_year
+birdman or (the unexpected virtue of ignorance):2014,Birdman or (The Unexpected Virtue of Ignorance),2014,194662.0,Birdman or (The Unexpected Virtue of Ignorance),2014-10-17,matched_exact_title_year
+biwi no.1:1999,Biwi No.1,1999,161226.0,Biwi No.1,1999-05-28,matched_exact_title_year
+blackkklansman:2018,BlacKkKlansman,2018,487558.0,BlacKkKlansman,2018-08-09,matched_exact_title_year
+black girl:1966,Black Girl,1966,95597.0,Black Girl,1966-03-17,matched_exact_title_year
+black mass:2015,Black Mass,2015,261023.0,Black Mass,2015-09-17,matched_exact_title_year
+black swan:2010,Black Swan,2010,44214.0,Black Swan,2010-12-03,matched_exact_title_year
+blade runner:1982,Blade Runner,1982,78.0,Blade Runner,1982-06-25,matched_exact_title_year
+blade runner 2049:2017,Blade Runner 2049,2017,335984.0,Blade Runner 2049,2017-10-04,matched_exact_title_year
+bleeder:1999,Bleeder,1999,17985.0,Bleeder,1999-08-06,matched_exact_title_year
+blood diamond:2006,Blood Diamond,2006,1372.0,Blood Diamond,2006-12-08,matched_exact_title_year
+blow:2001,Blow,2001,4133.0,Blow,2001-04-04,matched_exact_title_year
+blow out:1981,Blow Out,1981,11644.0,Blow Out,1981-07-24,matched_exact_title_year
+blow-up:1966,Blow-Up,1966,1052.0,Blow-Up,1966-12-18,matched_exact_title_year
+blue moon:2025,Blue Moon,2025,1299655.0,Blue Moon,2025-10-17,matched_exact_title_year
+blue velvet:1986,Blue Velvet,1986,793.0,Blue Velvet,1986-09-19,matched_exact_title_year
+bohemian rhapsody:2018,Bohemian Rhapsody,2018,424694.0,Bohemian Rhapsody,2018-10-24,matched_exact_title_year
+boogie nights:1997,Boogie Nights,1997,4995.0,Boogie Nights,1997-10-07,matched_exact_title_year
+borat subsequent moviefilm: delivery of prodigious bribe to american regime for make benefit once glorious nation of kazakhstan:2020,Borat Subsequent Moviefilm: Delivery of Prodigious Bribe to American Regime for Make Benefit Once Glorious Nation of Kazakhstan,2020,740985.0,Borat Subsequent Moviefilm: Delivery of Prodigious Bribe to American Regime for Make Benefit Once Glorious Nation of Kazakhstan,2020-10-23,matched_exact_title_year
+borat: cultural learnings of america for make benefit glorious nation of kazakhstan:2006,Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan,2006,496.0,Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan,2006-11-01,matched_exact_title_year
+boyhood:2014,Boyhood,2014,85350.0,Boyhood,2014-06-05,matched_exact_title_year
+braveheart:1995,Braveheart,1995,197.0,Braveheart,1995-05-24,matched_exact_title_year
+brazil:1985,Brazil,1985,68.0,Brazil,1985-02-20,matched_exact_title_year
+breaking the waves:1996,Breaking the Waves,1996,145.0,Breaking the Waves,1996-07-05,matched_exact_title_year
+bridge of spies:2015,Bridge of Spies,2015,296098.0,Bridge of Spies,2015-10-15,matched_exact_title_year
+bridge to terabithia:2007,Bridge to Terabithia,2007,1265.0,Bridge to Terabithia,2007-02-15,matched_exact_title_year
+bring her back:2025,Bring Her Back,2025,1151031.0,Bring Her Back,2025-05-19,matched_exact_title_year
+buffalo '66:1998,Buffalo '66,1998,9464.0,Buffalo '66,1998-01-20,matched_exact_title_year
+bugonia:2025,Bugonia,2025,701387.0,Bugonia,2025-10-23,matched_exact_title_year
+burning:2018,Burning,2018,491584.0,Burning,2018-05-17,matched_exact_title_year
+butch cassidy and the sundance kid:1969,Butch Cassidy and the Sundance Kid,1969,642.0,Butch Cassidy and the Sundance Kid,1969-09-23,matched_exact_title_year
+caché:2005,Caché,2005,445.0,Caché,2005-10-05,matched_exact_title_year
+call me by your name:2017,Call Me by Your Name,2017,398818.0,Call Me by Your Name,2017-10-01,matched_exact_title_year
+cannibal tours:1988,Cannibal Tours,1988,39181.0,Cannibal Tours,1988-06-14,matched_exact_title_year
+cape fear:1991,Cape Fear,1991,1598.0,Cape Fear,1991-11-13,matched_exact_title_year
+capitalism: a love story:2009,Capitalism: A Love Story,2009,22074.0,Capitalism: A Love Story,2009-09-06,matched_exact_title_year
+carlito's way:1993,Carlito's Way,1993,6075.0,Carlito's Way,1993-11-10,matched_exact_title_year
+carnival of souls:1962,Carnival of Souls,1962,16093.0,Carnival of Souls,1962-11-02,matched_exact_title_year
+casablanca:1942,Casablanca,1942,289.0,Casablanca,1943-01-15,matched_close_year
+casino:1995,Casino,1995,524.0,Casino,1995-11-22,matched_exact_title_year
+cast away:2000,Cast Away,2000,8358.0,Cast Away,2000-12-22,matched_exact_title_year
+catch me if you can:2002,Catch Me If You Can,2002,640.0,Catch Me If You Can,2002-12-16,matched_exact_title_year
+chachi 420:1997,Chachi 420,1997,134446.0,Chachi 420,1997-12-19,matched_exact_title_year
+chamatkar:1992,Chamatkar,1992,45002.0,Chamatkar,1992-07-08,matched_exact_title_year
+chernobyl:2019,Chernobyl,2019,608558.0,Mother of Chernobyl,2019-06-14,needs_review
+child's play:1988,Child's Play,1988,10585.0,Child's Play,1988-11-09,matched_exact_title_year
+children of men:2006,Children of Men,2006,9693.0,Children of Men,2006-09-22,matched_exact_title_year
+chinatown:1974,Chinatown,1974,829.0,Chinatown,1974-06-20,matched_exact_title_year
+chori chori chupke chupke:2001,Chori Chori Chupke Chupke,2001,107548.0,Chori Chori Chupke Chupke,2001-03-09,matched_exact_title_year
+chungking express:1994,Chungking Express,1994,11104.0,Chungking Express,1994-07-14,matched_exact_title_year
+circle:2015,Circle,2015,335866.0,Circle,2015-05-28,matched_exact_title_year
+citizen kane:1941,Citizen Kane,1941,15.0,Citizen Kane,1941-04-17,matched_exact_title_year
+city of god:2002,City of God,2002,598.0,City of God,2002-08-30,matched_exact_title_year
+"clean, shaven:1993","Clean, Shaven",1993,1479.0,"Clean, Shaven",1995-04-14,needs_review
+climates:2006,Climates,2006,18421.0,Climates,2006-09-07,matched_exact_title_year
+climax:2018,Climax,2018,507076.0,Climax,2018-09-19,matched_exact_title_year
+cloud:2024,Cloud,2024,1244244.0,Cloud,2024-09-27,matched_exact_title_year
+code unknown:2000,Code Unknown,2000,30970.0,Code Unknown,2000-11-15,matched_exact_title_year
+collateral:2004,Collateral,2004,1538.0,Collateral,2004-08-04,matched_exact_title_year
+come and see:1985,Come and See,1985,25237.0,Come and See,1985-10-17,matched_exact_title_year
+constantine:2005,Constantine,2005,561.0,Constantine,2005-02-08,matched_exact_title_year
+contact:1997,Contact,1997,686.0,Contact,1997-07-11,matched_exact_title_year
+contagion:2011,Contagion,2011,39538.0,Contagion,2011-09-08,matched_exact_title_year
+creep:2014,Creep,2014,250574.0,Creep,2014-03-08,matched_exact_title_year
+cries and whispers:1972,Cries and Whispers,1972,10238.0,Cries and Whispers,1972-12-21,matched_exact_title_year
+cure:1997,Cure,1997,36095.0,Cure,1997-12-27,matched_exact_title_year
+dahmer - monster: the jeffrey dahmer story:2022,DAHMER - Monster: The Jeffrey Dahmer Story,2022,,,,not_found
+dabangg:2010,Dabangg,2010,44425.0,Dabangg,2010-09-10,matched_exact_title_year
+dahomey:2024,Dahomey,2024,1101256.0,Dahomey,2024-09-11,matched_exact_title_year
+dallas buyers club:2013,Dallas Buyers Club,2013,152532.0,Dallas Buyers Club,2013-11-01,matched_exact_title_year
+damnation:1988,Damnation,1988,20122.0,Damnation,1988-10-20,matched_exact_title_year
+dancer in the dark:2000,Dancer in the Dark,2000,16.0,Dancer in the Dark,2000-09-01,matched_exact_title_year
+dangal:2016,Dangal,2016,360814.0,Dangal,2016-12-21,matched_exact_title_year
+darkest hour:2017,Darkest Hour,2017,399404.0,Darkest Hour,2017-11-22,matched_exact_title_year
+darna mana hai:2003,Darna Mana Hai,2003,74481.0,Darna Mana Hai,2003-06-25,matched_exact_title_year
+das boot:1981,Das Boot,1981,387.0,Das Boot,1981-09-17,matched_exact_title_year
+dave chappelle: sticks & stones:2019,Dave Chappelle: Sticks & Stones,2019,624932.0,Dave Chappelle: Sticks & Stones,2019-08-26,matched_exact_title_year
+dazed and confused:1993,Dazed and Confused,1993,9571.0,Dazed and Confused,1993-09-24,matched_exact_title_year
+dead man:1995,Dead Man,1995,922.0,Dead Man,1995-12-23,matched_exact_title_year
+dead poets society:1989,Dead Poets Society,1989,207.0,Dead Poets Society,1989-06-02,matched_exact_title_year
+decision to leave:2022,Decision to Leave,2022,705996.0,Decision to Leave,2022-06-29,matched_exact_title_year
+deep blue sea:1999,Deep Blue Sea,1999,8914.0,Deep Blue Sea,1999-07-28,matched_exact_title_year
+delhi belly:2011,Delhi Belly,2011,67109.0,Delhi Belly,2011-07-01,matched_exact_title_year
+dev.d:2009,Dev.D,2009,15977.0,Dev.D,2009-02-06,matched_exact_title_year
+devdas:2002,Devdas,2002,15917.0,Devdas,2002-07-11,matched_exact_title_year
+dhobi ghat:2010,Dhobi Ghat,2010,54890.0,Dhobi Ghat,2010-01-21,matched_exact_title_year
+dhol:2007,Dhol,2007,19418.0,Dhol,2007-09-14,matched_exact_title_year
+diabolique:1955,Diabolique,1955,827.0,Diabolique,1955-01-29,matched_exact_title_year
+dial m for murder:1954,Dial M for Murder,1954,521.0,Dial M for Murder,1954-05-29,matched_exact_title_year
+dil to pagal hai:1997,Dil To Pagal Hai,1997,13986.0,Dil To Pagal Hai,1997-10-30,matched_exact_title_year
+dirty harry:1971,Dirty Harry,1971,984.0,Dirty Harry,1971-12-23,matched_exact_title_year
+distant:2002,Distant,2002,31026.0,Distant,2002-12-20,matched_exact_title_year
+django unchained:2012,Django Unchained,2012,68718.0,Django Unchained,2012-12-25,matched_exact_title_year
+do the right thing:1989,Do the Right Thing,1989,925.0,Do the Right Thing,1989-06-14,matched_exact_title_year
+dog day afternoon:1975,Dog Day Afternoon,1975,968.0,Dog Day Afternoon,1975-09-21,matched_exact_title_year
+dogtooth:2009,Dogtooth,2009,38810.0,Dogtooth,2009-10-22,matched_exact_title_year
+dogville:2003,Dogville,2003,553.0,Dogville,2003-05-21,matched_exact_title_year
+don jon:2013,Don Jon,2013,138697.0,Don Jon,2013-09-12,matched_exact_title_year
+don't look up:2021,Don't Look Up,2021,646380.0,Don't Look Up,2021-12-08,matched_exact_title_year
+donnie brasco:1997,Donnie Brasco,1997,9366.0,Donnie Brasco,1997-02-27,matched_exact_title_year
+donnie darko:2001,Donnie Darko,2001,141.0,Donnie Darko,2001-01-19,matched_exact_title_year
+double indemnity:1944,Double Indemnity,1944,996.0,Double Indemnity,1944-07-06,matched_exact_title_year
+doubt:2008,Doubt,2008,14359.0,Doubt,2008-12-12,matched_exact_title_year
+downfall:2004,Downfall,2004,613.0,Downfall,2004-09-16,matched_exact_title_year
+dr. strangelove or: how i learned to stop worrying and love the bomb:1964,Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb,1964,935.0,Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb,1964-01-29,matched_exact_title_year
+drishyam:2015,Drishyam,2015,352173.0,Drishyam,2015-07-30,matched_exact_title_year
+drive:2011,Drive,2011,64690.0,Drive,2011-09-15,matched_exact_title_year
+dumb and dumber:1994,Dumb and Dumber,1994,8467.0,Dumb and Dumber,1994-12-16,matched_exact_title_year
+dumb and dumber to:2014,Dumb and Dumber To,2014,100042.0,Dumb and Dumber To,2014-11-12,matched_exact_title_year
+dunki:2023,Dunki,2023,960876.0,Dunki,2023-12-21,matched_exact_title_year
+dunkirk:2017,Dunkirk,2017,374720.0,Dunkirk,2017-07-19,matched_exact_title_year
+eddington:2025,Eddington,2025,648878.0,Eddington,2025-07-16,matched_exact_title_year
+ek tha tiger:2012,Ek Tha Tiger,2012,85985.0,Ek Tha Tiger,2012-08-15,matched_exact_title_year
+el topo:1970,El Topo,1970,13041.0,El Topo,1970-12-18,matched_exact_title_year
+elle:2016,Elle,2016,337674.0,Elle,2016-05-25,matched_exact_title_year
+enter the dragon:1973,Enter the Dragon,1973,9461.0,Enter the Dragon,1973-08-17,matched_exact_title_year
+enter the void:2009,Enter the Void,2009,34647.0,Enter the Void,2010-05-05,matched_close_year
+eraserhead:1977,Eraserhead,1977,985.0,Eraserhead,1977-09-28,matched_exact_title_year
+eternal sunshine of the spotless mind:2004,Eternal Sunshine of the Spotless Mind,2004,38.0,Eternal Sunshine of the Spotless Mind,2004-03-19,matched_exact_title_year
+everything everywhere all at once:2022,Everything Everywhere All at Once,2022,545611.0,Everything Everywhere All at Once,2022-03-24,matched_exact_title_year
+ex machina:2015,Ex Machina,2015,264660.0,Ex Machina,2015-01-21,matched_exact_title_year
+eyes wide shut:1999,Eyes Wide Shut,1999,345.0,Eyes Wide Shut,1999-07-16,matched_exact_title_year
+face/off:1997,Face/Off,1997,754.0,Face/Off,1997-06-27,matched_exact_title_year
+faces:1968,Faces,1968,753.0,Faces,1968-11-24,matched_exact_title_year
+fallen leaves:2023,Fallen Leaves,2023,986280.0,Fallen Leaves,2023-09-14,matched_exact_title_year
+fanaa:2006,Fanaa,2006,8453.0,Fanaa,2006-05-26,matched_exact_title_year
+fanny and alexander:1982,Fanny and Alexander,1982,5961.0,Fanny and Alexander,1982-12-17,matched_exact_title_year
+fargo:1996,Fargo,1996,275.0,Fargo,1996-03-08,matched_exact_title_year
+fast & furious:2009,Fast & Furious,2009,13804.0,Fast & Furious,2009-04-02,matched_exact_title_year
+fear and loathing in las vegas:1998,Fear and Loathing in Las Vegas,1998,1878.0,Fear and Loathing in Las Vegas,1998-05-22,matched_exact_title_year
+ferris bueller's day off:1986,Ferris Bueller's Day Off,1986,9377.0,Ferris Bueller's Day Off,1986-06-11,matched_exact_title_year
+fight club:1999,Fight Club,1999,550.0,Fight Club,1999-10-15,matched_exact_title_year
+flipped:2010,Flipped,2010,43949.0,Flipped,2010-08-06,matched_exact_title_year
+following:1998,Following,1998,11660.0,Following,1999-04-02,matched_close_year
+for a few dollars more:1965,For a Few Dollars More,1965,938.0,For a Few Dollars More,1965-12-18,matched_exact_title_year
+ford v ferrari:2019,Ford v Ferrari,2019,359724.0,Ford v Ferrari,2019-11-13,matched_exact_title_year
+forrest gump:1994,Forrest Gump,1994,13.0,Forrest Gump,1994-06-23,matched_exact_title_year
+fracture:2007,Fracture,2007,6145.0,Fracture,2007-04-19,matched_exact_title_year
+fractured:2019,Fractured,2019,568091.0,Fractured,2019-09-22,matched_exact_title_year
+frankenstein:2025,Frankenstein,2025,1062722.0,Frankenstein,2025-10-17,matched_exact_title_year
+friendship:2024,Friendship,2024,1239655.0,Friendship,2025-05-09,matched_close_year
+full metal jacket:1987,Full Metal Jacket,1987,600.0,Full Metal Jacket,1987-06-26,matched_exact_title_year
+funny games:1997,Funny Games,1997,10234.0,Funny Games,1997-09-11,matched_exact_title_year
+furious 7:2015,Furious 7,2015,168259.0,Furious 7,2015-04-01,matched_exact_title_year
+gangs of new york:2002,Gangs of New York,2002,3131.0,Gangs of New York,2002-12-14,matched_exact_title_year
+gangs of wasseypur - making uncut - the roots of revenge from wasseypur:2013,Gangs of Wasseypur - Making Uncut -  The Roots of Revenge from Wasseypur,2013,705701.0,Gangs of Wasseypur - Making Uncut -  The Roots of Revenge from Wasseypur,2013-01-21,matched_exact_title_year
+gangs of wasseypur – part 1:2012,Gangs of Wasseypur – Part 1,2012,117691.0,Gangs of Wasseypur - Part 1,2012-06-22,matched_exact_title_year
+gangs of wasseypur – part 2:2012,Gangs of Wasseypur – Part 2,2012,126400.0,Gangs of Wasseypur - Part 2,2012-08-08,matched_exact_title_year
+gattaca:1997,Gattaca,1997,782.0,Gattaca,1997-07-09,matched_exact_title_year
+george carlin's american dream:2022,George Carlin's American Dream,2022,,,,not_found
+gerald's game:2017,Gerald's Game,2017,343674.0,Gerald's Game,2017-09-29,matched_exact_title_year
+get out:2017,Get Out,2017,419430.0,Get Out,2017-02-24,matched_exact_title_year
+ghajini:2005,Ghajini,2005,69636.0,Ghajini,2005-10-14,matched_exact_title_year
+ghajini:2008,Ghajini,2008,14070.0,Ghajini,2008-12-25,matched_exact_title_year
+ghost rider:2007,Ghost Rider,2007,1250.0,Ghost Rider,2007-01-15,matched_exact_title_year
+"girl, interrupted:1999","Girl, Interrupted",1999,3558.0,"Girl, Interrupted",1999-12-21,matched_exact_title_year
+gladiator:2000,Gladiator,2000,98.0,Gladiator,2000-05-04,matched_exact_title_year
+glass:2019,Glass,2019,450465.0,Glass,2019-01-16,matched_exact_title_year
+god vulture and human:2023,God Vulture and Human,2023,1214770.0,God Vulture and Human,2023-12-07,matched_exact_title_year
+golmaal – fun unlimited:2006,Golmaal – Fun Unlimited,2006,19670.0,Golmaal – Fun Unlimited,2006-07-14,matched_exact_title_year
+gone girl:2014,Gone Girl,2014,210577.0,Gone Girl,2014-10-01,matched_exact_title_year
+"good luck, have fun, don't die:2025","Good Luck, Have Fun, Don't Die",2025,1119449.0,"Good Luck, Have Fun, Don't Die",2026-02-13,matched_close_year
+good time:2017,Good Time,2017,429200.0,Good Time,2017-08-11,matched_exact_title_year
+good will hunting:1997,Good Will Hunting,1997,489.0,Good Will Hunting,1997-12-05,matched_exact_title_year
+goodfellas:1990,GoodFellas,1990,769.0,GoodFellas,1990-09-12,matched_exact_title_year
+gotti:1996,Gotti,1996,14786.0,Gotti,1996-08-17,matched_exact_title_year
+gotti:2018,Gotti,2018,339103.0,Gotti,2018-06-14,matched_exact_title_year
+gravity:2013,Gravity,2013,49047.0,Gravity,2013-10-03,matched_exact_title_year
+green book:2018,Green Book,2018,490132.0,Green Book,2018-11-16,matched_exact_title_year
+greener grass:2019,Greener Grass,2019,547009.0,Greener Grass,2019-10-17,matched_exact_title_year
+grizzly man:2005,Grizzly Man,2005,501.0,Grizzly Man,2005-08-12,matched_exact_title_year
+groundhog day:1993,Groundhog Day,1993,137.0,Groundhog Day,1993-02-11,matched_exact_title_year
+gulaal:2009,Gulaal,2009,21625.0,Gulaal,2009-03-13,matched_exact_title_year
+gummo:1997,Gummo,1997,18415.0,Gummo,1997-10-17,matched_exact_title_year
+gupt: the hidden truth:1997,Gupt: The Hidden Truth,1997,21906.0,Gupt: The Hidden Truth,1997-07-04,matched_exact_title_year
+guru:2007,Guru,2007,15772.0,Guru,2007-01-12,matched_exact_title_year
+hacksaw ridge:2016,Hacksaw Ridge,2016,324786.0,Hacksaw Ridge,2016-10-07,matched_exact_title_year
+haider:2014,Haider,2014,280795.0,Haider,2014-10-02,matched_exact_title_year
+hamnet:2025,Hamnet,2025,858024.0,Hamnet,2025-11-26,matched_exact_title_year
+hannibal:2001,Hannibal,2001,9740.0,Hannibal,2001-02-08,matched_exact_title_year
+happiness:1998,Happiness,1998,10683.0,Happiness,1998-10-11,matched_exact_title_year
+harakiri:1962,Harakiri,1962,14537.0,Harakiri,1962-09-15,matched_exact_title_year
+hard eight:1996,Hard Eight,1996,8052.0,Hard Eight,1997-02-28,matched_close_year
+harry potter and the deathly hallows: part 2:2011,Harry Potter and the Deathly Hallows: Part 2,2011,12445.0,Harry Potter and the Deathly Hallows: Part 2,2011-07-12,matched_exact_title_year
+hazaaron khwaishein aisi:2003,Hazaaron Khwaishein Aisi,2003,21557.0,Hazaaron Khwaishein Aisi,2005-05-15,needs_review
+heat:1995,Heat,1995,949.0,Heat,1995-12-15,matched_exact_title_year
+hello brother:1999,Hello Brother,1999,39347.0,Hello Brother,1999-08-26,matched_exact_title_year
+her:2013,Her,2013,152601.0,Her,2013-12-18,matched_exact_title_year
+hera pheri:2000,Hera Pheri,2000,21614.0,Hera Pheri,2000-03-31,matched_exact_title_year
+hereditary:2018,Hereditary,2018,493922.0,Hereditary,2018-06-07,matched_exact_title_year
+heretic:2024,Heretic,2024,1138194.0,Heretic,2024-10-31,matched_exact_title_year
+high and low:1963,High and Low,1963,12493.0,High and Low,1963-03-01,matched_exact_title_year
+highway:2014,Highway,2014,1455945.0,Highway,2014-05-24,matched_exact_title_year
+hokum:2026,Hokum,2026,1430077.0,Hokum,2026-04-29,matched_exact_title_year
+holy spider:2022,Holy Spider,2022,889699.0,Holy Spider,2022-07-13,matched_exact_title_year
+home alone:1990,Home Alone,1990,771.0,Home Alone,1990-11-16,matched_exact_title_year
+horse girl:2020,Horse Girl,2020,653601.0,Horse Girl,2020-01-27,matched_exact_title_year
+hotel rwanda:2004,Hotel Rwanda,2004,205.0,Hotel Rwanda,2004-12-22,matched_exact_title_year
+house of gucci:2021,House of Gucci,2021,644495.0,House of Gucci,2021-11-24,matched_exact_title_year
+how high:2001,How High,2001,8386.0,How High,2001-12-21,matched_exact_title_year
+hum aapke hain koun..!:1994,Hum Aapke Hain Koun..!,1994,46387.0,Hum Aapke Hain Koun..!,1994-08-05,matched_exact_title_year
+hum dil de chuke sanam:1999,Hum Dil De Chuke Sanam,1999,5319.0,Hum Dil De Chuke Sanam,1999-06-18,matched_exact_title_year
+hum tum:2004,Hum Tum,2004,4253.0,Hum Tum,2004-05-28,matched_exact_title_year
+hum tumhare hain sanam:2002,Hum Tumhare Hain Sanam,2002,90634.0,Hum Tumhare Hain Sanam,2002-05-24,matched_exact_title_year
+hungama:2003,Hungama,2003,21184.0,Hungama,2003-08-01,matched_exact_title_year
+husbands:1970,Husbands,1970,52105.0,Husbands,1970-12-08,matched_exact_title_year
+i am cuba:1964,I Am Cuba,1964,32015.0,I Am Cuba,1964-10-26,matched_exact_title_year
+i am legend:2007,I Am Legend,2007,6479.0,I Am Legend,2007-12-12,matched_exact_title_year
+i hate luv storys:2010,I Hate Luv Storys,2010,40777.0,I Hate Luv Storys,2010-06-30,matched_exact_title_year
+i know what you did last summer:1997,I Know What You Did Last Summer,1997,3597.0,I Know What You Did Last Summer,1997-10-17,matched_exact_title_year
+i swear:2025,I Swear,2025,1317149.0,I Swear,2025-09-22,matched_exact_title_year
+i'm thinking of ending things:2020,I'm Thinking of Ending Things,2020,500840.0,I'm Thinking of Ending Things,2020-08-28,matched_exact_title_year
+icarus:2017,Icarus,2017,432976.0,Icarus,2017-06-03,matched_exact_title_year
+if i had legs i'd kick you:2025,If I Had Legs I'd Kick You,2025,1160360.0,If I Had Legs I'd Kick You,2025-10-10,matched_exact_title_year
+ikiru:1952,Ikiru,1952,3782.0,Ikiru,1952-10-09,matched_exact_title_year
+in bruges:2008,In Bruges,2008,8321.0,In Bruges,2008-02-08,matched_exact_title_year
+in which annie gives it those ones:1989,In Which Annie Gives It Those Ones,1989,364875.0,In Which Annie Gives It Those Ones,1989-01-22,matched_exact_title_year
+in the mood for love:2000,In the Mood for Love,2000,843.0,In the Mood for Love,2000-09-29,matched_exact_title_year
+incendies:2010,Incendies,2010,46738.0,Incendies,2010-09-17,matched_exact_title_year
+inception:2010,Inception,2010,27205.0,Inception,2010-07-15,matched_exact_title_year
+inglourious basterds:2009,Inglourious Basterds,2009,16869.0,Inglourious Basterds,2009-08-02,matched_exact_title_year
+inherent vice:2014,Inherent Vice,2014,171274.0,Inherent Vice,2014-12-12,matched_exact_title_year
+inland empire:2006,Inland Empire,2006,1730.0,Inland Empire,2006-12-06,matched_exact_title_year
+insidious:2010,Insidious,2010,49018.0,Insidious,2011-03-31,matched_close_year
+insidious: chapter 2:2013,Insidious: Chapter 2,2013,91586.0,Insidious: Chapter 2,2013-09-12,matched_exact_title_year
+insomnia:2002,Insomnia,2002,320.0,Insomnia,2002-05-24,matched_exact_title_year
+interstellar:2014,Interstellar,2014,157336.0,Interstellar,2014-11-05,matched_exact_title_year
+into the wild:2007,Into the Wild,2007,5915.0,Into the Wild,2007-09-21,matched_exact_title_year
+iqbal:2005,Iqbal,2005,21567.0,Iqbal,2005-08-26,matched_exact_title_year
+iron man:2008,Iron Man,2008,1726.0,Iron Man,2008-04-30,matched_exact_title_year
+irreversible:2002,Irreversible,2002,979.0,Irreversible,2002-05-22,matched_exact_title_year
+is raat ki subah nahin:1996,Is Raat Ki Subah Nahin,1996,328842.0,Is Raat Ki Subah Nahin,1996-06-07,matched_exact_title_year
+it:2017,It,2017,346364.0,It,2017-09-06,matched_exact_title_year
+it was just an accident:2025,It Was Just an Accident,2025,1456349.0,It Was Just an Accident,2025-10-01,matched_exact_title_year
+it's what's inside:2024,It's What's Inside,2024,1052280.0,It's What's Inside,2024-01-19,matched_exact_title_year
+jaan-e-mann:2006,Jaan-E-Mann,2006,59267.0,Jaan-E-Mann,2006-10-20,matched_exact_title_year
+jaane tu... ya jaane na:2008,Jaane Tu... Ya Jaane Na,2008,14467.0,Jaane Tu... Ya Jaane Na,2008-07-04,matched_exact_title_year
+jab tak hai jaan:2012,Jab Tak Hai Jaan,2012,132316.0,Jab Tak Hai Jaan,2012-11-13,matched_exact_title_year
+jab we met:2007,Jab We Met,2007,11807.0,Jab We Met,2007-10-26,matched_exact_title_year
+jackie brown:1997,Jackie Brown,1997,184.0,Jackie Brown,1997-12-25,matched_exact_title_year
+jacob's ladder:1990,Jacob's Ladder,1990,2291.0,Jacob's Ladder,1990-11-02,matched_exact_title_year
+jaws:1975,Jaws,1975,578.0,Jaws,1975-06-20,matched_exact_title_year
+"jeanne dielman, 23, quai du commerce, 1080 bruxelles:1975","Jeanne Dielman, 23, quai du Commerce, 1080 Bruxelles",1975,,,,not_found
+john wick:2014,John Wick,2014,245891.0,John Wick,2014-10-16,matched_exact_title_year
+joker:2019,Joker,2019,475557.0,Joker,2019-10-01,matched_exact_title_year
+josh:2000,Josh,2000,131940.0,Josh,2000-06-09,matched_exact_title_year
+joyland:2022,Joyland,2022,962571.0,Joyland,2022-11-18,matched_exact_title_year
+judas and the black messiah:2021,Judas and the Black Messiah,2021,583406.0,Judas and the Black Messiah,2021-02-12,matched_exact_title_year
+k-pax:2001,K-PAX,2001,167.0,K-PAX,2001-10-26,matched_exact_title_year
+kaal:2005,Kaal,2005,20132.0,Kaal,2005-04-29,matched_exact_title_year
+kagemusha:1980,Kagemusha,1980,11953.0,Kagemusha,1980-04-26,matched_exact_title_year
+kambakkht ishq:2009,Kambakkht Ishq,2009,10788.0,Kambakkht Ishq,2009-07-03,matched_exact_title_year
+karan arjun:1995,Karan Arjun,1995,93519.0,Karan Arjun,1995-01-13,matched_exact_title_year
+keane:2004,Keane,2004,13468.0,Keane,2004-09-03,matched_exact_title_year
+kill bill: vol. 1:2003,Kill Bill: Vol. 1,2003,24.0,Kill Bill: Vol. 1,2003-10-10,matched_exact_title_year
+kill bill: vol. 2:2004,Kill Bill: Vol. 2,2004,393.0,Kill Bill: Vol. 2,2004-04-16,matched_exact_title_year
+killers of the flower moon:2023,Killers of the Flower Moon,2023,466420.0,Killers of the Flower Moon,2023-10-18,matched_exact_title_year
+killing them softly:2012,Killing Them Softly,2012,64689.0,Killing Them Softly,2012-07-30,matched_exact_title_year
+kingsman: the secret service:2014,Kingsman: The Secret Service,2014,207703.0,Kingsman: The Secret Service,2015-01-24,matched_close_year
+knives out:2019,Knives Out,2019,546554.0,Knives Out,2019-11-27,matched_exact_title_year
+kramer vs. kramer:1979,Kramer vs. Kramer,1979,12102.0,Kramer vs. Kramer,1979-12-07,matched_exact_title_year
+kundun:1997,Kundun,1997,9746.0,Kundun,1997-12-25,matched_exact_title_year
+kung fu hustle:2004,Kung Fu Hustle,2004,9470.0,Kung Fu Hustle,2004-02-10,matched_exact_title_year
+kwaidan:1964,Kwaidan,1964,30959.0,Kwaidan,1965-01-06,matched_close_year
+l.a. confidential:1997,L.A. Confidential,1997,2118.0,L.A. Confidential,1997-09-19,matched_exact_title_year
+la haine:1995,La Haine,1995,406.0,La Haine,1995-05-31,matched_exact_title_year
+la la land:2016,La La Land,2016,313369.0,La La Land,2016-12-01,matched_exact_title_year
+lady bird:2017,Lady Bird,2017,391713.0,Lady Bird,2017-09-01,matched_exact_title_year
+lagaan: once upon a time in india:2001,Lagaan: Once Upon a Time in India,2001,19666.0,Lagaan: Once Upon a Time in India,2001-06-15,matched_exact_title_year
+lars and the real girl:2007,Lars and the Real Girl,2007,6615.0,Lars and the Real Girl,2007-10-12,matched_exact_title_year
+late shift:2025,Late Shift,2025,1356670.0,Late Shift,2025-02-27,matched_exact_title_year
+lawrence of arabia:1962,Lawrence of Arabia,1962,947.0,Lawrence of Arabia,1962-12-11,matched_exact_title_year
+le trou:1960,Le Trou,1960,29259.0,Le Trou,1960-03-18,matched_exact_title_year
+leave the world behind:2023,Leave the World Behind,2023,726209.0,Leave the World Behind,2023-11-22,matched_exact_title_year
+legend:2015,Legend,2015,276907.0,Legend,2015-09-09,matched_exact_title_year
+lemony snicket's a series of unfortunate events:2004,Lemony Snicket's A Series of Unfortunate Events,2004,11774.0,Lemony Snicket's A Series of Unfortunate Events,2004-12-16,matched_exact_title_year
+lenny:1974,Lenny,1974,27094.0,Lenny,1974-11-10,matched_exact_title_year
+let the right one in:2008,Let the Right One In,2008,13310.0,Let the Right One In,2008-10-24,matched_exact_title_year
+liar liar:1997,Liar Liar,1997,1624.0,Liar Liar,1997-03-21,matched_exact_title_year
+licorice pizza:2021,Licorice Pizza,2021,718032.0,Licorice Pizza,2021-11-26,matched_exact_title_year
+life is beautiful:1997,Life Is Beautiful,1997,637.0,Life Is Beautiful,1997-12-20,matched_exact_title_year
+like stars on earth:2007,Like Stars on Earth,2007,7508.0,Like Stars on Earth,2007-12-21,matched_exact_title_year
+limitless:2011,Limitless,2011,51876.0,Limitless,2011-03-17,matched_exact_title_year
+little manhattan:2005,Little Manhattan,2005,16553.0,Little Manhattan,2005-09-26,matched_exact_title_year
+little women:1994,Little Women,1994,9587.0,Little Women,1994-12-21,matched_exact_title_year
+"lock, stock and two smoking barrels:1998","Lock, Stock and Two Smoking Barrels",1998,100.0,"Lock, Stock and Two Smoking Barrels",1998-08-28,matched_exact_title_year
+lolita:1962,Lolita,1962,802.0,Lolita,1962-06-13,matched_exact_title_year
+looper:2012,Looper,2012,59967.0,Looper,2012-09-26,matched_exact_title_year
+lost highway:1997,Lost Highway,1997,638.0,Lost Highway,1997-01-15,matched_exact_title_year
+lost in translation:2003,Lost in Translation,2003,153.0,Lost in Translation,2003-09-18,matched_exact_title_year
+lucky number slevin:2006,Lucky Number Slevin,2006,186.0,Lucky Number Slevin,2006-02-24,matched_exact_title_year
+léon: the professional:1994,Léon: The Professional,1994,101.0,Léon: The Professional,1994-09-14,matched_exact_title_year
+m:1931,M,1931,832.0,M,1931-05-11,matched_exact_title_year
+mad max:1979,Mad Max,1979,9659.0,Mad Max,1979-04-12,matched_exact_title_year
+mad max 2:1981,Mad Max 2,1981,8810.0,Mad Max 2,1981-12-24,matched_exact_title_year
+mad max beyond thunderdome:1985,Mad Max Beyond Thunderdome,1985,9355.0,Mad Max Beyond Thunderdome,1985-06-29,matched_exact_title_year
+mad max: fury road:2015,Mad Max: Fury Road,2015,76341.0,Mad Max: Fury Road,2015-05-13,matched_exact_title_year
+magnolia:1999,Magnolia,1999,334.0,Magnolia,1999-12-17,matched_exact_title_year
+maharaj:2024,Maharaj,2024,1171099.0,Maharaj,2024-06-21,matched_exact_title_year
+main hoon na:2004,Main Hoon Na,2004,14134.0,Main Hoon Na,2004-04-30,matched_exact_title_year
+maine pyaar kyun kiya?:2005,Maine Pyaar Kyun Kiya?,2005,39217.0,Maine Pyaar Kyun Kiya?,2005-07-15,matched_exact_title_year
+malcolm x:1992,Malcolm X,1992,1883.0,Malcolm X,1992-11-18,matched_exact_title_year
+malena:2000,Malena,2000,10867.0,Malena,2000-10-27,matched_exact_title_year
+manchester by the sea:2016,Manchester by the Sea,2016,334541.0,Manchester by the Sea,2016-11-17,matched_exact_title_year
+mandabi:1968,Mandabi,1968,99329.0,Mandabi,1968-11-27,matched_exact_title_year
+mandy:2018,Mandy,2018,460885.0,Mandy,2018-09-13,matched_exact_title_year
+mann:1999,Mann,1999,159664.0,Mann,1999-07-09,matched_exact_title_year
+maqbool:2003,Maqbool,2003,21265.0,Maqbool,2003-01-30,matched_exact_title_year
+marriage story:2019,Marriage Story,2019,492188.0,Marriage Story,2019-09-28,matched_exact_title_year
+marty supreme:2025,Marty Supreme,2025,1317288.0,Marty Supreme,2025-12-19,matched_exact_title_year
+masaan:2015,Masaan,2015,336203.0,Masaan,2015-07-24,matched_exact_title_year
+masoom:1983,Masoom,1983,21462.0,Masoom,1983-01-10,matched_exact_title_year
+mean streets:1973,Mean Streets,1973,203.0,Mean Streets,1973-10-14,matched_exact_title_year
+meet the spartans:2008,Meet the Spartans,2008,7278.0,Meet the Spartans,2008-01-24,matched_exact_title_year
+melancholia:2011,Melancholia,2011,62215.0,Melancholia,2011-03-16,matched_exact_title_year
+memento:2000,Memento,2000,77.0,Memento,2000-10-11,matched_exact_title_year
+memories of murder:2003,Memories of Murder,2003,11423.0,Memories of Murder,2003-04-25,matched_exact_title_year
+metropolis:1927,Metropolis,1927,19.0,Metropolis,1927-01-10,matched_exact_title_year
+mickey 17:2025,Mickey 17,2025,696506.0,Mickey 17,2025-02-28,matched_exact_title_year
+midnight cowboy:1969,Midnight Cowboy,1969,3116.0,Midnight Cowboy,1969-05-25,matched_exact_title_year
+midsommar:2019,Midsommar,2019,530385.0,Midsommar,2019-07-03,matched_exact_title_year
+million dollar baby:2004,Million Dollar Baby,2004,70.0,Million Dollar Baby,2004-12-05,matched_exact_title_year
+minnie and moskowitz:1971,Minnie and Moskowitz,1971,24349.0,Minnie and Moskowitz,1971-12-22,matched_exact_title_year
+mirage:2018,Mirage,2018,529216.0,Mirage,2018-11-30,matched_exact_title_year
+mirror:1975,Mirror,1975,1396.0,Mirror,1975-03-07,matched_exact_title_year
+misery:1990,Misery,1990,1700.0,Misery,1990-11-30,matched_exact_title_year
+mohabbatein:2000,Mohabbatein,2000,11518.0,Mohabbatein,2000-10-27,matched_exact_title_year
+moneyball:2011,Moneyball,2011,60308.0,Moneyball,2011-09-23,matched_exact_title_year
+monty python and the holy grail:1975,Monty Python and the Holy Grail,1975,762.0,Monty Python and the Holy Grail,1975-04-03,matched_exact_title_year
+moonlight:2016,Moonlight,2016,376867.0,Moonlight,2016-10-21,matched_exact_title_year
+mother:2009,Mother,2009,30018.0,Mother,2009-05-28,matched_exact_title_year
+mother and son:1997,Mother and Son,1997,44361.0,Mother and Son,1997-02-20,matched_exact_title_year
+mr. india:1987,Mr. India,1987,41903.0,Mr. India,1987-05-25,matched_exact_title_year
+mr. nobody:2009,Mr. Nobody,2009,31011.0,Mr. Nobody,2009-11-06,matched_exact_title_year
+mud:2012,Mud,2012,103731.0,Mud,2013-04-26,matched_close_year
+mujhse dosti karoge!:2002,Mujhse Dosti Karoge!,2002,26277.0,Mujhse Dosti Karoge!,2002-08-08,matched_exact_title_year
+mujhse shaadi karogi:2004,Mujhse Shaadi Karogi,2004,20495.0,Mujhse Shaadi Karogi,2004-07-30,matched_exact_title_year
+mulholland drive:2001,Mulholland Drive,2001,1018.0,Mulholland Drive,2001-06-06,matched_exact_title_year
+murder 2:2011,Murder 2,2011,69775.0,Murder 2,2011-07-07,matched_exact_title_year
+murder mindfully:2024,Murder Mindfully,2024,,,,not_found
+my cousin vinny:1992,My Cousin Vinny,1992,10377.0,My Cousin Vinny,1992-03-13,matched_exact_title_year
+my dinner with andre:1981,My Dinner with Andre,1981,25468.0,My Dinner with Andre,1981-10-11,matched_exact_title_year
+my name is khan:2010,My Name Is Khan,2010,26022.0,My Name Is Khan,2010-02-10,matched_exact_title_year
+mysterious skin:2004,Mysterious Skin,2004,11171.0,Mysterious Skin,2005-03-30,matched_close_year
+mystery train:1989,Mystery Train,1989,11305.0,Mystery Train,1989-09-06,matched_exact_title_year
+naked:1993,Naked,1993,21450.0,Naked,1993-08-06,matched_exact_title_year
+nashville:1975,Nashville,1975,3121.0,Nashville,1975-06-11,matched_exact_title_year
+national theatre live: fleabag:2019,National Theatre Live: Fleabag,2019,620350.0,National Theatre Live: Fleabag,2019-09-12,matched_exact_title_year
+nayak: the real hero:2001,Nayak: The Real Hero,2001,33457.0,Nayak: The Real Hero,2001-09-07,matched_exact_title_year
+network:1976,Network,1976,10774.0,Network,1976-11-27,matched_exact_title_year
+never back down:2008,Never Back Down,2008,8456.0,Never Back Down,2008-03-04,matched_exact_title_year
+"new york, new york:1977","New York, New York",1977,12637.0,"New York, New York",1977-06-21,matched_exact_title_year
+nick of time:1995,Nick of Time,1995,2086.0,Nick of Time,1995-11-22,matched_exact_title_year
+night at the museum:2006,Night at the Museum,2006,1593.0,Night at the Museum,2006-12-20,matched_exact_title_year
+nightcrawler:2014,Nightcrawler,2014,242582.0,Nightcrawler,2014-10-23,matched_exact_title_year
+no country for old men:2007,No Country for Old Men,2007,6977.0,No Country for Old Men,2007-11-09,matched_exact_title_year
+no other choice:2025,No Other Choice,2025,639988.0,No Other Choice,2025-09-24,matched_exact_title_year
+no regrets for our youth:1946,No Regrets for Our Youth,1946,43487.0,No Regrets for Our Youth,1946-10-29,matched_exact_title_year
+nomadland:2020,Nomadland,2020,581734.0,Nomadland,2021-01-29,matched_close_year
+nope:2022,Nope,2022,762504.0,Nope,2022-07-20,matched_exact_title_year
+normal people:2020,Normal People,2020,1286673.0,Older Normal People,2020-06-26,needs_review
+nosferatu:1922,Nosferatu,1922,653.0,Nosferatu,1922-02-16,matched_exact_title_year
+nosferatu:2024,Nosferatu,2024,426063.0,Nosferatu,2024-12-25,matched_exact_title_year
+nosferatu the vampyre:1979,Nosferatu the Vampyre,1979,6404.0,Nosferatu the Vampyre,1979-01-17,matched_exact_title_year
+notting hill:1999,Notting Hill,1999,509.0,Notting Hill,1999-05-21,matched_exact_title_year
+now you see me:2013,Now You See Me,2013,75656.0,Now You See Me,2013-05-29,matched_exact_title_year
+nowhere:1997,Nowhere,1997,1811.0,Nowhere,1997-05-09,matched_exact_title_year
+oasis:2002,Oasis,2002,26955.0,Oasis,2002-08-09,matched_exact_title_year
+obsession:2025,Obsession,2025,1436161.0,Obsession,2025-03-28,matched_exact_title_year
+ocean's eleven:2001,Ocean's Eleven,2001,161.0,Ocean's Eleven,2001-12-07,matched_exact_title_year
+ocean's twelve:2004,Ocean's Twelve,2004,163.0,Ocean's Twelve,2004-12-09,matched_exact_title_year
+okja:2017,Okja,2017,387426.0,Okja,2017-06-28,matched_exact_title_year
+old dads:2023,Old Dads,2023,987917.0,Old Dads,2023-10-20,matched_exact_title_year
+oldboy:2003,Oldboy,2003,670.0,Oldboy,2003-11-21,matched_exact_title_year
+om shanti om:2007,Om Shanti Om,2007,8079.0,Om Shanti Om,2007-11-07,matched_exact_title_year
+omkara:2006,Omkara,2006,14705.0,Omkara,2006-07-28,matched_exact_title_year
+on the silver globe:1988,On the Silver Globe,1988,27072.0,On the Silver Globe,1989-02-10,matched_close_year
+once upon a time in america:1984,Once Upon a Time in America,1984,311.0,Once Upon a Time in America,1984-05-23,matched_exact_title_year
+once upon a time in anatolia:2011,Once Upon a Time in Anatolia,2011,74879.0,Once Upon a Time in Anatolia,2011-09-23,matched_exact_title_year
+once upon a time in mexico:2003,Once Upon a Time in Mexico,2003,1428.0,Once Upon a Time in Mexico,2003-09-11,matched_exact_title_year
+once upon a time... in hollywood:2019,Once Upon a Time... in Hollywood,2019,466272.0,Once Upon a Time... in Hollywood,2019-07-24,matched_exact_title_year
+one battle after another:2025,One Battle After Another,2025,1054867.0,One Battle After Another,2025-09-23,matched_exact_title_year
+one flew over the cuckoo's nest:1975,One Flew Over the Cuckoo's Nest,1975,510.0,One Flew Over the Cuckoo's Nest,1975-11-19,matched_exact_title_year
+only lovers left alive:2013,Only Lovers Left Alive,2013,152603.0,Only Lovers Left Alive,2013-12-12,matched_exact_title_year
+oppenheimer:2023,Oppenheimer,2023,872585.0,Oppenheimer,2023-07-19,matched_exact_title_year
+ordet:1955,Ordet,1955,48035.0,Ordet,1955-01-09,matched_exact_title_year
+orphan:2009,Orphan,2009,21208.0,Orphan,2009-07-24,matched_exact_title_year
+p.s. i love you:2007,P.S. I Love You,2007,6023.0,P.S. I Love You,2007-11-15,matched_exact_title_year
+paan singh tomar:2012,Paan Singh Tomar,2012,96398.0,Paan Singh Tomar,2012-03-02,matched_exact_title_year
+paanch:2003,Paanch,2003,64109.0,Paanch,2003-09-21,matched_exact_title_year
+pacific rim:2013,Pacific Rim,2013,68726.0,Pacific Rim,2013-07-11,matched_exact_title_year
+pan's labyrinth:2006,Pan's Labyrinth,2006,1417.0,Pan's Labyrinth,2006-10-11,matched_exact_title_year
+paradise:2023,Paradise,2023,1140066.0,Paradise,2023-06-24,matched_exact_title_year
+paranormal activity:2007,Paranormal Activity,2007,23827.0,Paranormal Activity,2007-09-14,matched_exact_title_year
+parasite:2019,Parasite,2019,496243.0,Parasite,2019-05-30,matched_exact_title_year
+"paris, texas:1984","Paris, Texas",1984,655.0,"Paris, Texas",1984-07-16,matched_exact_title_year
+passengers:2016,Passengers,2016,274870.0,Passengers,2016-12-21,matched_exact_title_year
+pather panchali:1955,Pather Panchali,1955,5801.0,Pather Panchali,1955-08-26,matched_exact_title_year
+paths of glory:1957,Paths of Glory,1957,975.0,Paths of Glory,1957-10-25,matched_exact_title_year
+pay it forward:2000,Pay It Forward,2000,10647.0,Pay It Forward,2000-10-20,matched_exact_title_year
+pearl:2022,Pearl,2022,949423.0,Pearl,2022-09-16,matched_exact_title_year
+peeping tom:1960,Peeping Tom,1960,11167.0,Peeping Tom,1960-04-07,matched_exact_title_year
+peppermint candy:1999,Peppermint Candy,1999,41245.0,Peppermint Candy,2000-01-01,matched_close_year
+persona:1966,Persona,1966,797.0,Persona,1966-10-18,matched_exact_title_year
+persona:2018,Persona,2018,797.0,Persona,1966-10-18,needs_review
+phantom thread:2017,Phantom Thread,2017,400617.0,Phantom Thread,2017-12-25,matched_exact_title_year
+phir bhi dil hai hindustani:2000,Phir Bhi Dil Hai Hindustani,2000,97351.0,Phir Bhi Dil Hai Hindustani,2000-01-21,matched_exact_title_year
+pi:1998,Pi,1998,473.0,Pi,1998-07-10,matched_exact_title_year
+pillion:2025,Pillion,2025,1287141.0,Pillion,2025-11-28,matched_exact_title_year
+pineapple express:2008,Pineapple Express,2008,10189.0,Pineapple Express,2008-08-06,matched_exact_title_year
+pink:2016,Pink,2016,415358.0,Pink,2016-09-16,matched_exact_title_year
+pink flamingos:1972,Pink Flamingos,1972,692.0,Pink Flamingos,1972-03-17,matched_exact_title_year
+pink floyd: the wall:1982,Pink Floyd: The Wall,1982,12104.0,Pink Floyd: The Wall,1982-07-14,matched_exact_title_year
+pirates of the caribbean: at world's end:2007,Pirates of the Caribbean: At World's End,2007,285.0,Pirates of the Caribbean: At World's End,2007-05-19,matched_exact_title_year
+pirates of the caribbean: dead man's chest:2006,Pirates of the Caribbean: Dead Man's Chest,2006,58.0,Pirates of the Caribbean: Dead Man's Chest,2006-07-06,matched_exact_title_year
+pirates of the caribbean: on stranger tides:2011,Pirates of the Caribbean: On Stranger Tides,2011,1865.0,Pirates of the Caribbean: On Stranger Tides,2011-05-15,matched_exact_title_year
+pirates of the caribbean: the curse of the black pearl:2003,Pirates of the Caribbean: The Curse of the Black Pearl,2003,22.0,Pirates of the Caribbean: The Curse of the Black Pearl,2003-07-09,matched_exact_title_year
+playtime:1967,PlayTime,1967,10227.0,PlayTime,1967-12-13,matched_exact_title_year
+polytechnique:2009,Polytechnique,2009,22302.0,Polytechnique,2009-02-06,matched_exact_title_year
+poor things:2023,Poor Things,2023,792307.0,Poor Things,2023-12-07,matched_exact_title_year
+portrait of a lady on fire:2019,Portrait of a Lady on Fire,2019,531428.0,Portrait of a Lady on Fire,2019-09-06,matched_exact_title_year
+possession:1981,Possession,1981,21484.0,Possession,1981-05-27,matched_exact_title_year
+possibly in michigan:1983,Possibly in Michigan,1983,332755.0,Possibly in Michigan,1983-01-01,matched_exact_title_year
+post tenebras lux:2012,Post Tenebras Lux,2012,103689.0,Post Tenebras Lux,2012-11-22,matched_exact_title_year
+predestination:2014,Predestination,2014,206487.0,Predestination,2014-08-28,matched_exact_title_year
+pride & prejudice:2005,Pride & Prejudice,2005,4348.0,Pride & Prejudice,2005-09-16,matched_exact_title_year
+primal fear:1996,Primal Fear,1996,1592.0,Primal Fear,1996-04-03,matched_exact_title_year
+primer:2004,Primer,2004,14337.0,Primer,2004-10-08,matched_exact_title_year
+prisoners:2013,Prisoners,2013,146233.0,Prisoners,2013-09-19,matched_exact_title_year
+project hail mary:2026,Project Hail Mary,2026,687163.0,Project Hail Mary,2026-03-15,matched_exact_title_year
+psycho:1960,Psycho,1960,539.0,Psycho,1960-06-22,matched_exact_title_year
+pulp fiction:1994,Pulp Fiction,1994,680.0,Pulp Fiction,1994-09-10,matched_exact_title_year
+punch-drunk love:2002,Punch-Drunk Love,2002,8051.0,Punch-Drunk Love,2002-10-11,matched_exact_title_year
+pusher:1996,Pusher,1996,2061.0,Pusher,1996-08-30,matched_exact_title_year
+pusher ii:2004,Pusher II,2004,11328.0,Pusher II,2004-12-25,matched_exact_title_year
+pusher iii:2005,Pusher III,2005,11330.0,Pusher 3,2005-08-22,needs_review
+pyaar kiya to darna kya:1998,Pyaar Kiya To Darna Kya,1998,45533.0,Pyaar Kiya To Darna Kya,1998-03-27,matched_exact_title_year
+raajneeti:2010,Raajneeti,2010,37951.0,Raajneeti,2010-06-04,matched_exact_title_year
+raging bull:1980,Raging Bull,1980,1578.0,Raging Bull,1980-11-14,matched_exact_title_year
+rain man:1988,Rain Man,1988,380.0,Rain Man,1988-12-12,matched_exact_title_year
+ran:1985,Ran,1985,11645.0,Ran,1985-06-01,matched_exact_title_year
+rashomon:1950,Rashomon,1950,548.0,Rashomon,1950-08-26,matched_exact_title_year
+ready:2011,Ready,2011,65946.0,Ready,2011-06-03,matched_exact_title_year
+rear window:1954,Rear Window,1954,567.0,Rear Window,1954-08-01,matched_exact_title_year
+red beard:1965,Red Beard,1965,3780.0,Red Beard,1965-03-04,matched_exact_title_year
+red dragon:2002,Red Dragon,2002,9533.0,Red Dragon,2002-10-02,matched_exact_title_year
+red eye:2005,Red Eye,2005,11460.0,Red Eye,2005-08-10,matched_exact_title_year
+rehnaa hai terre dil mein:2001,Rehnaa Hai Terre Dil Mein,2001,46418.0,Rehnaa Hai Terre Dil Mein,2001-10-19,matched_exact_title_year
+repulsion:1965,Repulsion,1965,11481.0,Repulsion,1965-06-01,matched_exact_title_year
+requiem for a dream:2000,Requiem for a Dream,2000,641.0,Requiem for a Dream,2000-10-06,matched_exact_title_year
+reservoir dogs:1992,Reservoir Dogs,1992,500.0,Reservoir Dogs,1992-09-02,matched_exact_title_year
+return of the jedi:1983,Return of the Jedi,1983,1892.0,Return of the Jedi,1983-05-25,matched_exact_title_year
+revolutionary road:2008,Revolutionary Road,2008,4148.0,Revolutionary Road,2008-12-19,matched_exact_title_year
+ricky gervais: armageddon:2023,Ricky Gervais: Armageddon,2023,1208476.0,Ricky Gervais: Armageddon,2023-12-01,matched_exact_title_year
+ricky gervais: humanity:2018,Ricky Gervais: Humanity,2018,508933.0,Ricky Gervais: Humanity,2018-03-13,matched_exact_title_year
+ricky gervais: supernature:2022,Ricky Gervais: SuperNature,2022,973164.0,Ricky Gervais: SuperNature,2022-05-24,matched_exact_title_year
+risky business:1983,Risky Business,1983,9346.0,Risky Business,1983-08-05,matched_exact_title_year
+rocket singh: salesman of the year:2009,Rocket Singh: Salesman of the Year,2009,26815.0,Rocket Singh: Salesman of the Year,2009-12-11,matched_exact_title_year
+rogue one: a star wars story:2016,Rogue One: A Star Wars Story,2016,330459.0,Rogue One: A Star Wars Story,2016-12-14,matched_exact_title_year
+room in rome:2010,Room in Rome,2010,48650.0,Room in Rome,2010-05-07,matched_exact_title_year
+rope:1948,Rope,1948,1580.0,Rope,1948-02-01,matched_exact_title_year
+rosemary's baby:1968,Rosemary's Baby,1968,805.0,Rosemary's Baby,1968-06-12,matched_exact_title_year
+run:2020,Run,2020,546121.0,Run,2020-11-20,matched_exact_title_year
+rush:2013,Rush,2013,96721.0,Rush,2013-09-02,matched_exact_title_year
+russian ark:2002,Russian Ark,2002,16646.0,Russian Ark,2002-05-22,matched_exact_title_year
+saathiya:2002,Saathiya,2002,20656.0,Saathiya,2002-12-20,matched_exact_title_year
+"salò, or the 120 days of sodom:1975","Salò, or the 120 Days of Sodom",1975,5336.0,"Salò, or the 120 Days of Sodom",1976-01-10,matched_close_year
+sanjuro:1962,Sanjuro,1962,11712.0,Sanjuro,1962-01-01,matched_exact_title_year
+saving private ryan:1998,Saving Private Ryan,1998,857.0,Saving Private Ryan,1998-07-24,matched_exact_title_year
+saw:2004,Saw,2004,176.0,Saw,2004-10-01,matched_exact_title_year
+saw ii:2005,Saw II,2005,215.0,Saw II,2005-10-28,matched_exact_title_year
+saw iii:2006,Saw III,2006,214.0,Saw III,2006-10-26,matched_exact_title_year
+saw iv:2007,Saw IV,2007,663.0,Saw IV,2007-10-25,matched_exact_title_year
+saw v:2008,Saw V,2008,11917.0,Saw V,2008-10-23,matched_exact_title_year
+saw vi:2009,Saw VI,2009,22804.0,Saw VI,2009-10-22,matched_exact_title_year
+scandal:1950,Scandal,1950,32690.0,Scandal,1950-04-26,matched_exact_title_year
+scarface:1932,Scarface,1932,877.0,Scarface,1932-04-09,matched_exact_title_year
+scarface:1983,Scarface,1983,111.0,Scarface,1983-12-09,matched_exact_title_year
+scenes from a marriage:1974,Scenes from a Marriage,1974,133919.0,Scenes from a Marriage,1974-09-15,matched_exact_title_year
+scent of a woman:1992,Scent of a Woman,1992,9475.0,Scent of a Woman,1992-12-23,matched_exact_title_year
+schindler's list:1993,Schindler's List,1993,424.0,Schindler's List,1993-12-15,matched_exact_title_year
+se7en:1995,Se7en,1995,807.0,Se7en,1995-09-22,matched_exact_title_year
+seconds:1966,Seconds,1966,20620.0,Seconds,1966-10-05,matched_exact_title_year
+secret sunshine:2007,Secret Sunshine,2007,2015.0,Secret Sunshine,2007-05-23,matched_exact_title_year
+secrets & lies:1996,Secrets & Lies,1996,11159.0,Secrets & Lies,1996-05-24,matched_exact_title_year
+sense and sensibility:1995,Sense and Sensibility,1995,4584.0,Sense and Sensibility,1995-12-13,matched_exact_title_year
+sentimental value:2025,Sentimental Value,2025,1124566.0,Sentimental Value,2025-08-20,matched_exact_title_year
+serpico:1973,Serpico,1973,9040.0,Serpico,1973-12-18,matched_exact_title_year
+seven samurai:1954,Seven Samurai,1954,346.0,Seven Samurai,1954-04-26,matched_exact_title_year
+shadows:1958,Shadows,1958,15484.0,Shadows,1960-10-14,needs_review
+shadows in paradise:1986,Shadows in Paradise,1986,3.0,Shadows in Paradise,1986-10-17,matched_exact_title_year
+shane gillis: beautiful dogs:2023,Shane Gillis: Beautiful Dogs,2023,1169007.0,Shane Gillis: Beautiful Dogs,2023-09-05,matched_exact_title_year
+sherlock holmes: a game of shadows:2011,Sherlock Holmes: A Game of Shadows,2011,58574.0,Sherlock Holmes: A Game of Shadows,2011-11-22,matched_exact_title_year
+sholay:1975,Sholay,1975,12259.0,Sholay,1975-08-15,matched_exact_title_year
+shoplifters:2018,Shoplifters,2018,505192.0,Shoplifters,2018-06-02,matched_exact_title_year
+shutter island:2010,Shutter Island,2010,11324.0,Shutter Island,2010-02-14,matched_exact_title_year
+silence:2016,Silence,2016,68730.0,Silence,2016-12-23,matched_exact_title_year
+silent hill:2006,Silent Hill,2006,588.0,Silent Hill,2006-04-21,matched_exact_title_year
+silver linings playbook:2012,Silver Linings Playbook,2012,82693.0,Silver Linings Playbook,2012-11-16,matched_exact_title_year
+singham:2011,Singham,2011,70590.0,Singham,2011-07-22,matched_exact_title_year
+sinners:2025,Sinners,2025,1233413.0,Sinners,2025-04-16,matched_exact_title_year
+sirāt:2025,Sirāt,2025,1151272.0,Sirāt,2025-06-06,matched_exact_title_year
+sixteen candles:1984,Sixteen Candles,1984,15144.0,Sixteen Candles,1984-05-04,matched_exact_title_year
+skins:2017,Skins,2017,435707.0,Skins,2017-06-09,matched_exact_title_year
+skyfall:2012,Skyfall,2012,37724.0,Skyfall,2012-10-24,matched_exact_title_year
+sleepy hollow:1999,Sleepy Hollow,1999,2668.0,Sleepy Hollow,1999-11-19,matched_exact_title_year
+snake in the eagle's shadow:1978,Snake in the Eagle's Shadow,1978,11537.0,Snake in the Eagle's Shadow,1978-03-01,matched_exact_title_year
+snatch:2000,Snatch,2000,107.0,Snatch,2000-09-01,matched_exact_title_year
+snowden:2016,Snowden,2016,302401.0,Snowden,2016-09-15,matched_exact_title_year
+snowpiercer:2013,Snowpiercer,2013,110415.0,Snowpiercer,2013-08-01,matched_exact_title_year
+solaris:1972,Solaris,1972,593.0,Solaris,1972-03-20,matched_exact_title_year
+solo: a star wars story:2018,Solo: A Star Wars Story,2018,348350.0,Solo: A Star Wars Story,2018-05-15,matched_exact_title_year
+some like it hot:1959,Some Like It Hot,1959,239.0,Some Like It Hot,1959-03-19,matched_exact_title_year
+something borrowed:2011,Something Borrowed,2011,49022.0,Something Borrowed,2011-05-05,matched_exact_title_year
+something's gotta give:2003,Something's Gotta Give,2003,6964.0,Something's Gotta Give,2003-12-12,matched_exact_title_year
+sooryavansham:1999,Sooryavansham,1999,194136.0,Sooryavansham,1999-05-21,matched_exact_title_year
+sorry to bother you:2018,Sorry to Bother You,2018,424781.0,Sorry to Bother You,2018-07-06,matched_exact_title_year
+"sorry, baby:2025","Sorry, Baby",2025,1205515.0,"Sorry, Baby",2025-06-27,matched_exact_title_year
+sound of falling:2025,Sound of Falling,2025,1221061.0,Sound of Falling,2025-08-28,matched_exact_title_year
+sound of metal:2019,Sound of Metal,2019,502033.0,Sound of Metal,2020-11-20,matched_close_year
+special 26:2013,Special 26,2013,165904.0,Special 26,2013-02-07,matched_exact_title_year
+speed:1994,Speed,1994,1637.0,Speed,1994-06-09,matched_exact_title_year
+spider-man:2002,Spider-Man,2002,557.0,Spider-Man,2002-05-01,matched_exact_title_year
+spirited away:2001,Spirited Away,2001,129.0,Spirited Away,2001-07-20,matched_exact_title_year
+split:2016,Split,2016,358364.0,Split,2016-04-07,matched_exact_title_year
+spotlight:2015,Spotlight,2015,314365.0,Spotlight,2015-11-06,matched_exact_title_year
+squid game:2021,Squid Game,2021,,,,not_found
+stalker:1979,Stalker,1979,1398.0,Stalker,1979-05-25,matched_exact_title_year
+star wars:1977,Star Wars,1977,11.0,Star Wars,1977-05-25,matched_exact_title_year
+star wars: episode i – the phantom menace:1999,Star Wars: Episode I – The Phantom Menace,1999,1893.0,Star Wars: Episode I - The Phantom Menace,1999-05-19,matched_exact_title_year
+star wars: episode ii – attack of the clones:2002,Star Wars: Episode II – Attack of the Clones,2002,1894.0,Star Wars: Episode II - Attack of the Clones,2002-05-15,needs_review
+star wars: episode iii – revenge of the sith:2005,Star Wars: Episode III – Revenge of the Sith,2005,1895.0,Star Wars: Episode III - Revenge of the Sith,2005-05-17,needs_review
+star wars: the force awakens:2015,Star Wars: The Force Awakens,2015,140607.0,Star Wars: The Force Awakens,2015-12-15,matched_exact_title_year
+star wars: the last jedi:2017,Star Wars: The Last Jedi,2017,181808.0,Star Wars: The Last Jedi,2017-12-13,matched_exact_title_year
+star wars: the rise of skywalker:2019,Star Wars: The Rise of Skywalker,2019,181812.0,Star Wars: The Rise of Skywalker,2019-12-18,matched_exact_title_year
+stranger than paradise:1984,Stranger Than Paradise,1984,469.0,Stranger Than Paradise,1984-10-01,matched_exact_title_year
+straw dogs:1971,Straw Dogs,1971,994.0,Straw Dogs,1971-11-25,matched_exact_title_year
+student of the year:2012,Student Of The Year,2012,138122.0,Student Of The Year,2012-10-19,matched_exact_title_year
+suicide squad:2016,Suicide Squad,2016,297761.0,Suicide Squad,2016-08-03,matched_exact_title_year
+sunset boulevard:1950,Sunset Boulevard,1950,599.0,Sunset Boulevard,1950-08-10,matched_exact_title_year
+superbad:2007,Superbad,2007,8363.0,Superbad,2007-08-17,matched_exact_title_year
+suspiria:1977,Suspiria,1977,11906.0,Suspiria,1977-02-01,matched_exact_title_year
+"synecdoche, new york:2008","Synecdoche, New York",2008,4960.0,"Synecdoche, New York",2008-10-24,matched_exact_title_year
+t2 trainspotting:2017,T2 Trainspotting,2017,180863.0,T2 Trainspotting,2017-01-27,matched_exact_title_year
+taken 3:2014,Taken 3,2014,260346.0,Taken 3,2014-12-16,matched_exact_title_year
+tampopo:1985,Tampopo,1985,11830.0,Tampopo,1985-11-23,matched_exact_title_year
+tangerine:2015,Tangerine,2015,308084.0,Tangerine,2015-07-10,matched_exact_title_year
+taxi driver:1976,Taxi Driver,1976,103.0,Taxi Driver,1976-02-09,matched_exact_title_year
+ted:2012,Ted,2012,72105.0,Ted,2012-06-29,matched_exact_title_year
+tees maar khan:2010,Tees Maar Khan,2010,46040.0,Tees Maar Khan,2010-12-24,matched_exact_title_year
+teeth:2007,Teeth,2007,884188.0,Teeth,2007-02-27,matched_exact_title_year
+tenet:2020,Tenet,2020,577922.0,Tenet,2020-08-22,matched_exact_title_year
+the 40 year old virgin:2005,The 40 Year Old Virgin,2005,6957.0,The 40 Year-Old Virgin,2005-08-11,needs_review
+the age of innocence:1993,The Age of Innocence,1993,10436.0,The Age of Innocence,1993-09-10,matched_exact_title_year
+the amityville horror:2005,The Amityville Horror,2005,10065.0,The Amityville Horror,2005-04-14,matched_exact_title_year
+the apartment:1960,The Apartment,1960,284.0,The Apartment,1960-06-21,matched_exact_title_year
+the aviator:2004,The Aviator,2004,2567.0,The Aviator,2004-12-17,matched_exact_title_year
+the bad sleep well:1960,The Bad Sleep Well,1960,31589.0,The Bad Sleep Well,1960-09-19,matched_exact_title_year
+the banshees of inisherin:2022,The Banshees of Inisherin,2022,674324.0,The Banshees of Inisherin,2022-10-20,matched_exact_title_year
+the batman:2022,The Batman,2022,414906.0,The Batman,2022-03-01,matched_exact_title_year
+the battle of algiers:1966,The Battle of Algiers,1966,17295.0,The Battle of Algiers,1966-09-08,matched_exact_title_year
+the beach:2000,The Beach,2000,1907.0,The Beach,2000-02-03,matched_exact_title_year
+the big lebowski:1998,The Big Lebowski,1998,115.0,The Big Lebowski,1998-03-06,matched_exact_title_year
+the big short:2015,The Big Short,2015,318846.0,The Big Short,2015-12-11,matched_exact_title_year
+the blair witch project:1999,The Blair Witch Project,1999,2667.0,The Blair Witch Project,1999-07-14,matched_exact_title_year
+the blue trail:2025,The Blue Trail,2025,1172265.0,The Blue Trail,2025-08-28,matched_exact_title_year
+the boy in the striped pyjamas:2008,The Boy in the Striped Pyjamas,2008,14574.0,The Boy in the Striped Pyjamas,2008-05-07,matched_exact_title_year
+the bridges of madison county:1995,The Bridges of Madison County,1995,688.0,The Bridges of Madison County,1995-06-02,matched_exact_title_year
+the brown bunny:2003,The Brown Bunny,2003,12703.0,The Brown Bunny,2003-11-14,matched_exact_title_year
+the brutalist:2024,The Brutalist,2024,549509.0,The Brutalist,2024-12-20,matched_exact_title_year
+the bucket list:2007,The Bucket List,2007,7350.0,The Bucket List,2007-12-25,matched_exact_title_year
+the butterfly effect:2004,The Butterfly Effect,2004,1954.0,The Butterfly Effect,2004-01-17,matched_exact_title_year
+the cabin in the woods:2011,The Cabin in the Woods,2011,22970.0,The Cabin in the Woods,2012-04-12,matched_close_year
+the celebration:1998,The Celebration,1998,309.0,The Celebration,1998-06-19,matched_exact_title_year
+the color of money:1986,The Color of Money,1986,11873.0,The Color of Money,1986-10-17,matched_exact_title_year
+the color of pomegranates:1969,The Color of Pomegranates,1969,26302.0,The Color of Pomegranates,1969-10-01,matched_exact_title_year
+the conformist:1970,The Conformist,1970,8416.0,The Conformist,1971-01-29,matched_close_year
+the conjuring:2013,The Conjuring,2013,138843.0,The Conjuring,2013-07-18,matched_exact_title_year
+the conversation:1974,The Conversation,1974,592.0,The Conversation,1974-04-12,matched_exact_title_year
+the cremator:1969,The Cremator,1969,18352.0,The Cremator,1969-03-14,matched_exact_title_year
+the crush:1993,The Crush,1993,33408.0,The Crush,1993-04-02,matched_exact_title_year
+the curious case of benjamin button:2008,The Curious Case of Benjamin Button,2008,4922.0,The Curious Case of Benjamin Button,2008-12-25,matched_exact_title_year
+the da vinci code:2006,The Da Vinci Code,2006,591.0,The Da Vinci Code,2006-05-17,matched_exact_title_year
+the danish girl:2015,The Danish Girl,2015,306819.0,The Danish Girl,2015-11-27,matched_exact_title_year
+the dark knight:2008,The Dark Knight,2008,155.0,The Dark Knight,2008-07-16,matched_exact_title_year
+the dark knight rises:2012,The Dark Knight Rises,2012,49026.0,The Dark Knight Rises,2012-07-17,matched_exact_title_year
+the deer hunter:1978,The Deer Hunter,1978,11778.0,The Deer Hunter,1978-12-08,matched_exact_title_year
+the departed:2006,The Departed,2006,1422.0,The Departed,2006-10-04,matched_exact_title_year
+the devil:1972,The Devil,1972,95043.0,The Devil,1972-01-01,matched_exact_title_year
+the devil wears prada:2006,The Devil Wears Prada,2006,350.0,The Devil Wears Prada,2006-06-29,matched_exact_title_year
+the devil's advocate:1997,The Devil's Advocate,1997,1813.0,The Devil's Advocate,1997-10-17,matched_exact_title_year
+the dictator:2012,The Dictator,2012,76493.0,The Dictator,2012-05-15,matched_exact_title_year
+the double life of véronique:1991,The Double Life of Véronique,1991,1600.0,The Double Life of Véronique,1991-05-15,matched_exact_title_year
+the drama:2026,The Drama,2026,1325734.0,The Drama,2026-04-01,matched_exact_title_year
+the elephant man:1980,The Elephant Man,1980,1955.0,The Elephant Man,1980-10-09,matched_exact_title_year
+the empire strikes back:1980,The Empire Strikes Back,1980,1891.0,The Empire Strikes Back,1980-05-20,matched_exact_title_year
+the exorcism of emily rose:2005,The Exorcism of Emily Rose,2005,8643.0,The Exorcism of Emily Rose,2005-09-09,matched_exact_title_year
+the exorcist:1973,The Exorcist,1973,9552.0,The Exorcist,1973-12-26,matched_exact_title_year
+the expendables:2010,The Expendables,2010,27578.0,The Expendables,2010-08-07,matched_exact_title_year
+the face of another:1966,The Face of Another,1966,29452.0,The Face of Another,1966-07-15,matched_exact_title_year
+the falling:2014,The Falling,2014,294741.0,The Falling,2015-04-24,matched_close_year
+the fast and the furious:2001,The Fast and the Furious,2001,9799.0,The Fast and the Furious,2001-06-22,matched_exact_title_year
+the fast and the furious: tokyo drift:2006,The Fast and the Furious: Tokyo Drift,2006,9615.0,The Fast and the Furious: Tokyo Drift,2006-06-03,matched_exact_title_year
+the fault in our stars:2014,The Fault in Our Stars,2014,222935.0,The Fault in Our Stars,2014-06-02,matched_exact_title_year
+the favourite:2018,The Favourite,2018,375262.0,The Favourite,2018-11-23,matched_exact_title_year
+the firm:1993,The Firm,1993,37233.0,The Firm,1993-06-30,matched_exact_title_year
+the game:1997,The Game,1997,2649.0,The Game,1997-09-12,matched_exact_title_year
+the girl next door:2004,The Girl Next Door,2004,10591.0,The Girl Next Door,2004-04-09,matched_exact_title_year
+the godfather:1972,The Godfather,1972,238.0,The Godfather,1972-03-14,matched_exact_title_year
+the godfather part ii:1974,The Godfather Part II,1974,240.0,The Godfather Part II,1974-12-20,matched_exact_title_year
+the godfather part iii:1990,The Godfather Part III,1990,242.0,The Godfather Part III,1990-12-25,matched_exact_title_year
+"the good, the bad and the ugly:1966","The Good, the Bad and the Ugly",1966,429.0,"The Good, the Bad and the Ugly",1966-12-23,matched_exact_title_year
+the graduate:1967,The Graduate,1967,37247.0,The Graduate,1967-12-21,matched_exact_title_year
+the grand budapest hotel:2014,The Grand Budapest Hotel,2014,120467.0,The Grand Budapest Hotel,2014-02-26,matched_exact_title_year
+the great gatsby:2013,The Great Gatsby,2013,64682.0,The Great Gatsby,2013-05-09,matched_exact_title_year
+the green mile:1999,The Green Mile,1999,497.0,The Green Mile,1999-12-10,matched_exact_title_year
+the grudge:2004,The Grudge,2004,1970.0,The Grudge,2004-10-22,matched_exact_title_year
+the grudge 2:2006,The Grudge 2,2006,1975.0,The Grudge 2,2006-10-12,matched_exact_title_year
+the grudge 3:2009,The Grudge 3,2009,1977.0,The Grudge 3,2009-05-12,matched_exact_title_year
+the handmaiden:2016,The Handmaiden,2016,290098.0,The Handmaiden,2016-06-01,matched_exact_title_year
+the hateful eight:2015,The Hateful Eight,2015,273248.0,The Hateful Eight,2015-12-25,matched_exact_title_year
+the holdovers:2023,The Holdovers,2023,840430.0,The Holdovers,2023-10-27,matched_exact_title_year
+the holy mountain:1973,The Holy Mountain,1973,8327.0,The Holy Mountain,1973-11-29,matched_exact_title_year
+the hours:2002,The Hours,2002,590.0,The Hours,2002-12-27,matched_exact_title_year
+the house that jack built:2018,The House That Jack Built,2018,398173.0,The House That Jack Built,2018-10-04,matched_exact_title_year
+the human condition i: no greater love:1959,The Human Condition I: No Greater Love,1959,31217.0,The Human Condition I: No Greater Love,1959-01-15,matched_exact_title_year
+the human condition ii: road to eternity:1959,The Human Condition II: Road to Eternity,1959,34528.0,The Human Condition II: Road to Eternity,1959-11-20,matched_exact_title_year
+the human condition iii: a soldier's prayer:1961,The Human Condition III: A Soldier's Prayer,1961,34530.0,The Human Condition III: A Soldier's Prayer,1961-01-28,matched_exact_title_year
+the hunt:2012,The Hunt,2012,103663.0,The Hunt,2012-10-25,matched_exact_title_year
+the idiots:1998,The Idiots,1998,452.0,The Idiots,1998-05-20,matched_exact_title_year
+the imitation game:2014,The Imitation Game,2014,205596.0,The Imitation Game,2014-11-14,matched_exact_title_year
+the interview:2014,The Interview,2014,228967.0,The Interview,2014-12-25,matched_exact_title_year
+the invite:2026,The Invite,2026,950028.0,The Invite,2026-06-25,matched_exact_title_year
+the irishman:2019,The Irishman,2019,398978.0,The Irishman,2019-11-01,matched_exact_title_year
+the irishman: in conversation:2019,The Irishman: In Conversation,2019,651724.0,The Irishman: In Conversation,2019-11-27,matched_exact_title_year
+the karate kid:2010,The Karate Kid,2010,38575.0,The Karate Kid,2010-06-10,matched_exact_title_year
+the killing of a sacred deer:2017,The Killing of a Sacred Deer,2017,399057.0,The Killing of a Sacred Deer,2017-10-20,matched_exact_title_year
+the king of comedy:1982,The King of Comedy,1982,262.0,The King of Comedy,1982-12-18,matched_exact_title_year
+the king's speech:2010,The King's Speech,2010,45269.0,The King's Speech,2010-11-26,matched_exact_title_year
+the last king of scotland:2006,The Last King of Scotland,2006,1523.0,The Last King of Scotland,2006-09-27,matched_exact_title_year
+the last temptation of christ:1988,The Last Temptation of Christ,1988,11051.0,The Last Temptation of Christ,1988-05-28,matched_exact_title_year
+the legend of bhagat singh:2002,The Legend of Bhagat Singh,2002,31525.0,The Legend of Bhagat Singh,2002-06-07,matched_exact_title_year
+the lighthouse:2019,The Lighthouse,2019,503919.0,The Lighthouse,2019-10-18,matched_exact_title_year
+the lincoln lawyer:2011,The Lincoln Lawyer,2011,50348.0,The Lincoln Lawyer,2011-03-17,matched_exact_title_year
+the lives of others:2006,The Lives of Others,2006,582.0,The Lives of Others,2006-03-23,matched_exact_title_year
+the lobster:2015,The Lobster,2015,254320.0,The Lobster,2015-10-15,matched_exact_title_year
+the long goodbye:1973,The Long Goodbye,1973,1847.0,The Long Goodbye,1973-03-08,matched_exact_title_year
+the lord of the rings: the fellowship of the ring:2001,The Lord of the Rings: The Fellowship of the Ring,2001,120.0,The Lord of the Rings: The Fellowship of the Ring,2001-12-18,matched_exact_title_year
+the lord of the rings: the return of the king:2003,The Lord of the Rings: The Return of the King,2003,122.0,The Lord of the Rings: The Return of the King,2003-12-17,matched_exact_title_year
+the lord of the rings: the two towers:2002,The Lord of the Rings: The Two Towers,2002,121.0,The Lord of the Rings: The Two Towers,2002-12-18,matched_exact_title_year
+the machinist:2004,The Machinist,2004,4553.0,The Machinist,2004-09-24,matched_exact_title_year
+the man who wasn't there:2001,The Man Who Wasn't There,2001,10778.0,The Man Who Wasn't There,2001-10-26,matched_exact_title_year
+the man from earth:2007,The Man from Earth,2007,13363.0,The Man from Earth,2007-06-10,matched_exact_title_year
+the manchurian candidate:1962,The Manchurian Candidate,1962,982.0,The Manchurian Candidate,1962-10-24,matched_exact_title_year
+the many saints of newark:2021,The Many Saints of Newark,2021,524369.0,The Many Saints of Newark,2021-09-22,matched_exact_title_year
+the martian:2015,The Martian,2015,286217.0,The Martian,2015-09-30,matched_exact_title_year
+the master:2012,The Master,2012,68722.0,The Master,2012-09-14,matched_exact_title_year
+the match factory girl:1990,The Match Factory Girl,1990,7974.0,The Match Factory Girl,1990-01-12,matched_exact_title_year
+the matrix:1999,The Matrix,1999,603.0,The Matrix,1999-03-31,matched_exact_title_year
+the matrix reloaded:2003,The Matrix Reloaded,2003,604.0,The Matrix Reloaded,2003-05-15,matched_exact_title_year
+the matrix revolutions:2003,The Matrix Revolutions,2003,605.0,The Matrix Revolutions,2003-11-05,matched_exact_title_year
+the midnight meat train:2008,The Midnight Meat Train,2008,10185.0,The Midnight Meat Train,2008-08-07,matched_exact_title_year
+the most hated woman in america:2017,The Most Hated Woman in America,2017,401743.0,The Most Hated Woman in America,2017-03-14,matched_exact_title_year
+the motorcycle diaries:2004,The Motorcycle Diaries,2004,1653.0,The Motorcycle Diaries,2004-02-06,matched_exact_title_year
+the mummy:1999,The Mummy,1999,564.0,The Mummy,1999-04-16,matched_exact_title_year
+the night of the hunter:1955,The Night of the Hunter,1955,3112.0,The Night of the Hunter,1955-07-26,matched_exact_title_year
+the northman:2022,The Northman,2022,639933.0,The Northman,2022-04-07,matched_exact_title_year
+the notebook:2004,The Notebook,2004,11036.0,The Notebook,2004-06-25,matched_exact_title_year
+the number 23:2007,The Number 23,2007,3594.0,The Number 23,2007-02-23,matched_exact_title_year
+the odyssey:2026,The Odyssey,2026,1368337.0,The Odyssey,2026-07-15,matched_exact_title_year
+the omen:2006,The Omen,2006,806.0,The Omen,2006-06-06,matched_exact_title_year
+the one:2001,The One,2001,10796.0,The One,2001-11-02,matched_exact_title_year
+the panic in needle park:1971,The Panic in Needle Park,1971,27554.0,The Panic in Needle Park,1971-06-01,matched_exact_title_year
+the passion of joan of arc:1928,The Passion of Joan of Arc,1928,780.0,The Passion of Joan of Arc,1928-04-21,matched_exact_title_year
+the perfect neighbor:2025,The Perfect Neighbor,2025,1400782.0,The Perfect Neighbor,2025-10-10,matched_exact_title_year
+the perks of being a wallflower:2012,The Perks of Being a Wallflower,2012,84892.0,The Perks of Being a Wallflower,2012-09-20,matched_exact_title_year
+the pianist:2002,The Pianist,2002,423.0,The Pianist,2002-09-17,matched_exact_title_year
+the piano:1993,The Piano,1993,713.0,The Piano,1993-05-18,matched_exact_title_year
+the piano teacher:2001,The Piano Teacher,2001,1791.0,The Piano Teacher,2001-09-05,matched_exact_title_year
+the platform:2019,The Platform,2019,619264.0,The Platform,2019-11-08,matched_exact_title_year
+the player:1992,The Player,1992,10403.0,The Player,1992-05-08,matched_exact_title_year
+the prestige:2006,The Prestige,2006,1124.0,The Prestige,2006-10-19,matched_exact_title_year
+the pursuit of happyness:2006,The Pursuit of Happyness,2006,1402.0,The Pursuit of Happyness,2006-12-14,matched_exact_title_year
+the reader:2008,The Reader,2008,8055.0,The Reader,2008-12-10,matched_exact_title_year
+the red shoes:1948,The Red Shoes,1948,19542.0,The Red Shoes,1948-09-06,matched_exact_title_year
+the remains of the day:1993,The Remains of the Day,1993,1245.0,The Remains of the Day,1993-11-05,matched_exact_title_year
+the revenant:2015,The Revenant,2015,281957.0,The Revenant,2015-12-25,matched_exact_title_year
+the ring:2002,The Ring,2002,565.0,The Ring,2002-10-18,matched_exact_title_year
+the room:2003,The Room,2003,17473.0,The Room,2003-06-27,matched_exact_title_year
+the score:2001,The Score,2001,11371.0,The Score,2001-07-13,matched_exact_title_year
+the searchers:1956,The Searchers,1956,3114.0,The Searchers,1956-05-16,matched_exact_title_year
+the secret agent:2025,The Secret Agent,2025,1220564.0,The Secret Agent,2025-07-23,matched_exact_title_year
+the secret life of walter mitty:2013,The Secret Life of Walter Mitty,2013,116745.0,The Secret Life of Walter Mitty,2013-12-18,matched_exact_title_year
+the seventh continent:1989,The Seventh Continent,1989,32761.0,The Seventh Continent,1989-10-20,matched_exact_title_year
+the seventh seal:1957,The Seventh Seal,1957,490.0,The Seventh Seal,1957-02-16,matched_exact_title_year
+the shawshank redemption:1994,The Shawshank Redemption,1994,278.0,The Shawshank Redemption,1994-09-23,matched_exact_title_year
+the shining:1980,The Shining,1980,694.0,The Shining,1980-05-23,matched_exact_title_year
+the silence of the lambs:1991,The Silence of the Lambs,1991,274.0,The Silence of the Lambs,1991-02-14,matched_exact_title_year
+the sixth sense:1999,The Sixth Sense,1999,745.0,The Sixth Sense,1999-08-06,matched_exact_title_year
+the social network:2010,The Social Network,2010,37799.0,The Social Network,2010-10-01,matched_exact_title_year
+the stepford wives:1975,The Stepford Wives,1975,12223.0,The Stepford Wives,1975-02-12,matched_exact_title_year
+the substance:2024,The Substance,2024,933260.0,The Substance,2024-09-07,matched_exact_title_year
+the tenant:1976,The Tenant,1976,11482.0,The Tenant,1976-05-26,matched_exact_title_year
+the texas chainsaw massacre:2003,The Texas Chainsaw Massacre,2003,9373.0,The Texas Chainsaw Massacre,2003-05-21,matched_exact_title_year
+the theory of everything:2014,The Theory of Everything,2014,266856.0,The Theory of Everything,2014-11-07,matched_exact_title_year
+the third man:1949,The Third Man,1949,1092.0,The Third Man,1949-08-31,matched_exact_title_year
+the town:2010,The Town,2010,23168.0,The Town,2010-09-15,matched_exact_title_year
+the train:1964,The Train,1964,3482.0,The Train,1964-09-24,matched_exact_title_year
+the transporter:2002,The Transporter,2002,4108.0,The Transporter,2002-10-02,matched_exact_title_year
+the truman show:1998,The Truman Show,1998,37165.0,The Truman Show,1998-06-04,matched_exact_title_year
+the turin horse:2011,The Turin Horse,2011,81401.0,The Turin Horse,2011-03-31,matched_exact_title_year
+the two popes:2019,The Two Popes,2019,551332.0,The Two Popes,2019-11-27,matched_exact_title_year
+the untouchables:1987,The Untouchables,1987,117.0,The Untouchables,1987-06-03,matched_exact_title_year
+the usual suspects:1995,The Usual Suspects,1995,629.0,The Usual Suspects,1995-07-19,matched_exact_title_year
+the vanishing:1988,The Vanishing,1988,8740.0,The Vanishing,1988-10-27,matched_exact_title_year
+the voice of hind rajab:2025,The Voice of Hind Rajab,2025,1480382.0,The Voice of Hind Rajab,2025-09-10,matched_exact_title_year
+the wailing:2016,The Wailing,2016,293670.0,The Wailing,2016-05-12,matched_exact_title_year
+the white ribbon:2009,The White Ribbon,2009,37903.0,The White Ribbon,2009-09-24,matched_exact_title_year
+the white tiger:2021,The White Tiger,2021,628534.0,The White Tiger,2021-01-13,matched_exact_title_year
+the wicker man:1973,The Wicker Man,1973,16307.0,The Wicker Man,1973-12-06,matched_exact_title_year
+the wild pear tree:2018,The Wild Pear Tree,2018,418472.0,The Wild Pear Tree,2018-06-01,matched_exact_title_year
+the wind that shakes the barley:2006,The Wind That Shakes the Barley,2006,1116.0,The Wind That Shakes the Barley,2006-06-23,matched_exact_title_year
+the witch:2015,The Witch,2015,526667.0,The Witch,2015-06-23,matched_exact_title_year
+the wolf of wall street:2013,The Wolf of Wall Street,2013,106646.0,The Wolf of Wall Street,2013-12-25,matched_exact_title_year
+the woman in black:2012,The Woman in Black,2012,65086.0,The Woman in Black,2012-02-03,matched_exact_title_year
+the woman in the window:2021,The Woman in the Window,2021,520663.0,The Woman in the Window,2021-05-13,matched_exact_title_year
+the zone of interest:2023,The Zone of Interest,2023,467244.0,The Zone of Interest,2023-12-15,matched_exact_title_year
+there will be blood:2007,There Will Be Blood,2007,7345.0,There Will Be Blood,2007-12-26,matched_exact_title_year
+threads:1984,Threads,1984,17835.0,Threads,1984-09-23,matched_exact_title_year
+three colours: blue:1993,Three Colours: Blue,1993,108.0,Three Colors: Blue,1993-09-08,needs_review
+throne of blood:1957,Throne of Blood,1957,3777.0,Throne of Blood,1957-01-15,matched_exact_title_year
+time of the wolf:2003,Time of the Wolf,2003,24190.0,Time of the Wolf,2003-08-28,matched_exact_title_year
+titane:2021,Titane,2021,630240.0,Titane,2021-07-14,matched_exact_title_year
+titanic:1997,Titanic,1997,597.0,Titanic,1997-12-18,matched_exact_title_year
+tokyo godfathers:2003,Tokyo Godfathers,2003,13398.0,Tokyo Godfathers,2003-12-05,matched_exact_title_year
+tokyo sonata:2008,Tokyo Sonata,2008,8937.0,Tokyo Sonata,2008-09-27,matched_exact_title_year
+touki bouki:1973,Touki Bouki,1973,77771.0,Touki Bouki,1973-05-10,matched_exact_title_year
+train dreams:2025,Train Dreams,2025,1241983.0,Train Dreams,2025-11-05,matched_exact_title_year
+training day:2001,Training Day,2001,2034.0,Training Day,2001-10-05,matched_exact_title_year
+trainspotting:1996,Trainspotting,1996,627.0,Trainspotting,1996-02-23,matched_exact_title_year
+transformers:2007,Transformers,2007,1858.0,Transformers,2007-06-27,matched_exact_title_year
+triangle of sadness:2022,Triangle of Sadness,2022,497828.0,Triangle of Sadness,2022-09-18,matched_exact_title_year
+tropic thunder:2008,Tropic Thunder,2008,7446.0,Tropic Thunder,2008-08-09,matched_exact_title_year
+troy:2004,Troy,2004,652.0,Troy,2004-05-13,matched_exact_title_year
+true grit:2010,True Grit,2010,44264.0,True Grit,2010-12-22,matched_exact_title_year
+tumbbad:2018,Tumbbad,2018,538858.0,Tumbbad,2018-10-12,matched_exact_title_year
+twelve monkeys:1995,Twelve Monkeys,1995,63.0,Twelve Monkeys,1995-12-29,matched_exact_title_year
+twin peaks:1989,Twin Peaks,1989,452522.0,Twin Peaks,1989-12-08,matched_exact_title_year
+twin peaks: fire walk with me:1992,Twin Peaks: Fire Walk with Me,1992,1923.0,Twin Peaks: Fire Walk with Me,1992-06-03,matched_exact_title_year
+twin peaks: the return:2017,Twin Peaks: The Return,2017,498842.0,Bad Binoculars,2017-12-05,needs_review
+tár:2022,TÁR,2022,817758.0,TÁR,2022-10-07,matched_exact_title_year
+udaan:2010,Udaan,2010,45316.0,Udaan,2010-06-17,matched_exact_title_year
+uncle boonmee who can recall his past lives:2010,Uncle Boonmee Who Can Recall His Past Lives,2010,38368.0,Uncle Boonmee Who Can Recall His Past Lives,2010-06-25,matched_exact_title_year
+uncut gems:2019,Uncut Gems,2019,473033.0,Uncut Gems,2019-08-30,matched_exact_title_year
+under the skin:2013,Under the Skin,2013,698232.0,Under the Skin,2013-10-19,matched_exact_title_year
+unforgiven:1992,Unforgiven,1992,33.0,Unforgiven,1992-08-07,matched_exact_title_year
+v for vendetta:2005,V for Vendetta,2005,752.0,V for Vendetta,2006-02-23,matched_close_year
+vaastav:1999,Vaastav,1999,146270.0,Vaastav,1999-10-07,matched_exact_title_year
+vanilla sky:2001,Vanilla Sky,2001,1903.0,Vanilla Sky,2001-12-14,matched_exact_title_year
+venom:2018,Venom,2018,335983.0,Venom,2018-09-28,matched_exact_title_year
+vera drake:2004,Vera Drake,2004,11109.0,Vera Drake,2004-10-22,matched_exact_title_year
+vertigo:1958,Vertigo,1958,426.0,Vertigo,1958-05-28,matched_exact_title_year
+vicky cristina barcelona:2008,Vicky Cristina Barcelona,2008,5038.0,Vicky Cristina Barcelona,2008-08-15,matched_exact_title_year
+vicky donor:2012,Vicky Donor,2012,103243.0,Vicky Donor,2012-04-20,matched_exact_title_year
+victoria:2015,Victoria,2015,320007.0,Victoria,2015-06-11,matched_exact_title_year
+videodrome:1983,Videodrome,1983,837.0,Videodrome,1983-02-04,matched_exact_title_year
+viridiana:1961,Viridiana,1961,4497.0,Viridiana,1962-04-01,matched_close_year
+vortex:2021,Vortex,2021,807070.0,Vortex,2021-10-16,matched_exact_title_year
+wall·e:2008,WALL·E,2008,10681.0,WALL·E,2008-06-26,matched_exact_title_year
+wanted:2008,Wanted,2008,8909.0,Wanted,2008-06-19,matched_exact_title_year
+wanted:2009,Wanted,2009,22717.0,Wanted,2009-09-18,matched_exact_title_year
+waqt:2005,Waqt,2005,31364.0,Waqt,2005-04-22,matched_exact_title_year
+weapons:2025,Weapons,2025,1078605.0,Weapons,2025-08-04,matched_exact_title_year
+welcome:2007,Welcome,2007,20294.0,Welcome,2007-12-21,matched_exact_title_year
+werckmeister harmonies:2000,Werckmeister Harmonies,2000,23160.0,Werckmeister Harmonies,2001-02-01,matched_close_year
+what happened was...:1994,What Happened Was...,1994,83718.0,What Happened Was...,1994-09-09,matched_exact_title_year
+what's eating gilbert grape:1993,What's Eating Gilbert Grape,1993,1587.0,What's Eating Gilbert Grape,1993-12-17,matched_exact_title_year
+while we watched:2022,While We Watched,2022,1016217.0,While We Watched,2023-07-14,matched_close_year
+whiplash:2014,Whiplash,2014,244786.0,Whiplash,2014-10-10,matched_exact_title_year
+wild at heart:1990,Wild at Heart,1990,483.0,Wild at Heart,1990-08-17,matched_exact_title_year
+winter sleep:2014,Winter Sleep,2014,265169.0,Winter Sleep,2014-06-13,matched_exact_title_year
+woman in the dunes:1964,Woman in the Dunes,1964,16672.0,Woman in the Dunes,1964-02-15,matched_exact_title_year
+wrong turn:2003,Wrong Turn,2003,9902.0,Wrong Turn,2003-05-30,matched_exact_title_year
+wrong turn 2: dead end:2007,Wrong Turn 2: Dead End,2007,13186.0,Wrong Turn 2: Dead End,2007-08-25,matched_exact_title_year
+wrong turn 3: left for dead:2009,Wrong Turn 3: Left for Dead,2009,23823.0,Wrong Turn 3: Left for Dead,2009-10-08,matched_exact_title_year
+x-men origins: wolverine:2009,X-Men Origins: Wolverine,2009,2080.0,X-Men Origins: Wolverine,2009-04-28,matched_exact_title_year
+yes boss:1997,Yes Boss,1997,79982.0,Yes Boss,1997-07-18,matched_exact_title_year
+yi yi:2000,Yi Yi,2000,25538.0,Yi Yi,2000-09-20,matched_exact_title_year
+yojimbo:1961,Yojimbo,1961,11878.0,Yojimbo,1961-04-25,matched_exact_title_year
+yuva:2004,Yuva,2004,43410.0,Yuva,2004-05-22,matched_exact_title_year
+zathura: a space adventure:2005,Zathura: A Space Adventure,2005,6795.0,Zathura: A Space Adventure,2005-11-06,matched_exact_title_year
+zodiac:2007,Zodiac,2007,1949.0,Zodiac,2007-03-02,matched_exact_title_year
+aka charlie sheen:2025,aka Charlie Sheen,2025,,,,not_found
+mother!:2017,mother!,2017,381283.0,mother!,2017-09-13,matched_exact_title_year

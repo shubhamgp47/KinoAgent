@@ -1,0 +1,14 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Streamlit: FilmGPT",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/.venv/Scripts/streamlit",
+      "args": ["run", "app_local_llm_oscar_tool.py", "--server.headless", "true", "--global.developmentMode=false"],
+      "console": "integratedTerminal",
+      "justMyCode": false
+    }
+  ]
+}
