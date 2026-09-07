@@ -3,7 +3,7 @@ from typing import Any, List
 
 hf_logging.set_verbosity_error()  # or set_verbosity_warning()
 
-from backend_local_llm_oscar_tool import (film_gpt,
+from backend import (film_gpt,
     get_all_threads,
 )
 
@@ -134,10 +134,18 @@ def get_pending_interrupt(thread_id: str):
 def save_pending_interrupt(thread_id: str, interrupt_object) -> None:
     """
     Save the pending interrupt information inside Streamlit session state.
+    Prefers a human-readable 'message' field if the interrupt payload is a
+    dict, falling back to a plain string representation otherwise.
     """
+    value = interrupt_object.value
+    if isinstance(value, dict):
+        prompt_text = value.get("message", str(value))
+    else:
+        prompt_text = str(value)
+
     st.session_state["pending_hitl"] = {
         "thread_id": thread_id,
-        "prompt": str(interrupt_object.value),
+        "prompt": prompt_text,
     }
 
 
@@ -193,50 +201,42 @@ def resume_hitl_execution(decision: str) -> None:
     }
 
     try:
-        # Display the resumed response
-        with st.chat_message("assistant"):
-            status_holder = {
-                "box": st.status(
-                    "🔄 Resuming the requested action...",
-                    expanded=True,
-                )
-            }
+        # NOTE: we do NOT call st.chat_message() / st.status() / st.write_stream()
+        # here anymore. This function runs while Streamlit's execution context
+        # is still inside the sidebar's `with st.sidebar:` block (because the
+        # Approve/Reject button that triggered this lives there). Rendering
+        # chat UI directly at this point makes it show up inside the sidebar
+        # instead of the main chat area. Instead, we just collect the resumed
+        # text quietly and let the normal message_history loop in the main
+        # body render it after st.rerun().
+        collected_chunks = []
 
-            def resumed_ai_only_stream():
-                # Resume the graph with the human decision
-                for message_chunk, metadata in film_gpt.stream(
-                    Command(resume=decision),
-                    config=resume_config,
-                    stream_mode="messages",
-                ):
-                    # Update tool execution status
-                    if isinstance(message_chunk, ToolMessage):
-                        tool_name = getattr(
-                            message_chunk,
-                            "name",
-                            "tool",
-                        )
-                        status_holder["box"].update(
-                            label=f"🔧 Using `{tool_name}` …",
-                            state="running",
-                            expanded=True,
-                        )
+        def resumed_ai_only_stream():
+            # Resume the graph with the human decision
+            for message_chunk, metadata in film_gpt.stream(
+                Command(resume=decision),
+                config=resume_config,
+                stream_mode="messages",
+            ):
+                # Stream only assistant-generated text (model-agnostic)
+                if isinstance(message_chunk, (AIMessage, AIMessageChunk)):
+                    text = extract_text_from_ai_message(message_chunk)
+                    if text:
+                        collected_chunks.append(text)
+                        yield text
 
-                    # Stream only assistant-generated text (model-agnostic)
-                    if isinstance(message_chunk, (AIMessage, AIMessageChunk)):
-                        text = extract_text_from_ai_message(message_chunk)
-                        if text:
-                            yield text
+        # Drain the generator so the graph actually resumes and runs to
+        # completion. We don't pass this to st.write_stream anymore since
+        # we're not rendering here — we just need the side effect (the
+        # tool executing) plus the collected text for message_history.
+        for _ in resumed_ai_only_stream():
+            pass
 
-            ai_message = st.write_stream(resumed_ai_only_stream())
+        ai_message = "".join(collected_chunks)
 
-            status_holder["box"].update(
-                label="✅ Action finished",
-                state="complete",
-                expanded=False,
-            )
-
-            # Save the resumed assistant response
+        # Save the resumed assistant response
+        # (this is what the main chat loop will render after st.rerun())
+        if ai_message:
             st.session_state["message_history"].append(
                 {
                     "role": "assistant",
@@ -421,6 +421,7 @@ with st.sidebar:
                 use_container_width=True,
             ):
                 resume_hitl_execution("yes")
+                st.rerun()
 
         with reject_column:
             if st.button(
@@ -429,6 +430,7 @@ with st.sidebar:
                 use_container_width=True,
             ):
                 resume_hitl_execution("no")
+                st.rerun()
 
 
 # Main body: title and message history
@@ -520,7 +522,7 @@ if user_input:
                     pending_interrupt,
                 )
                 yield (
-                    "\\n\\n⚠️ This action requires your approval. "
+                    "⚠️ This action requires your approval. "
                     "Use the Approve or Reject button in the sidebar."
                 )
 

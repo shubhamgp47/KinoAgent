@@ -1,7 +1,19 @@
 import time
 from functools import wraps
-from prometheus_client import Counter, Histogram, start_http_server
+from prometheus_client import Counter, Histogram, start_http_server, REGISTRY
 from langgraph.errors import GraphInterrupt
+
+def get_or_create_counter(name: str, documentation: str, labelnames=()):
+    """Helper to prevent DuplicateTimeseries errors upon module re-import."""
+    if name in REGISTRY._names_to_collectors:
+        return REGISTRY._names_to_collectors[name]
+    return Counter(name, documentation, labelnames=labelnames)
+
+def get_or_create_histogram(name: str, documentation: str, labelnames=(), buckets=Histogram.DEFAULT_BUCKETS):
+    """Helper to prevent DuplicateTimeseries errors upon module re-import."""
+    if name in REGISTRY._names_to_collectors:
+        return REGISTRY._names_to_collectors[name]
+    return Histogram(name, documentation, labelnames=labelnames, buckets=buckets)
 
 # 1. Metric Definitions
 '''A Counter tracks counts of events or running totals.
@@ -11,27 +23,27 @@ Example use cases for Counters:
 Number of requests processed
 Number of items that were inserted into a queue
 Total amount of data that a system has processed'''
-TOOL_CALL_TOTAL = Counter(
+TOOL_CALL_TOTAL = get_or_create_counter(
     "kinoagent_tool_calls_total",
     "Total invocations of KinoAgent tools",
-    ["tool_name", "status"],  # status: success | error
+    labelnames=["tool_name", "status"],
 )
 
 '''Histograms sample observations (usually execution duration or request sizes) and place them into predefined numerical bins (buckets).
 In Prometheus, _bucket counters allow Grafana to calculate accurate percentiles (e.g., $P_{50}$, $P_{95}$, $P_{99}$) using the histogram_quantile() PromQL function.'''
-TOOL_LATENCY_SECONDS = Histogram(
+TOOL_LATENCY_SECONDS = get_or_create_histogram(
     "kinoagent_tool_latency_seconds",
     "Execution duration per tool in seconds",
-    ["tool_name"],
+    labelnames=["tool_name"],
     buckets=[0.05, 0.1, 0.25, 0.5, 1.0, 2.5, 5.0, 10.0, 30.0, 120.0],
 )
 
-SQL_GENERATION_FAILURES = Counter(
+SQL_GENERATION_FAILURES = get_or_create_counter(
     "kinoagent_sql_generation_failures_total",
     "Total count of rejected or malformed SQL generations",
 )
 
-CHAT_NODE_LATENCY = Histogram(
+CHAT_NODE_LATENCY = get_or_create_histogram(
     "kinoagent_chat_node_latency_seconds",
     "Latency of main LLM router node",
     buckets=[0.5, 1.0, 2.5, 5.0, 10.0, 30.0, 60.0, 120.0],

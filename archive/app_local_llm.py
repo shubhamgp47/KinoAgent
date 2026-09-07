@@ -3,7 +3,7 @@ from typing import Any, List
 
 hf_logging.set_verbosity_error()  # or set_verbosity_warning()
 
-from backend_watchlist_tool import (film_gpt,
+from archive.backend_local_llm import (film_gpt,
     get_all_threads,
 )
 
@@ -134,18 +134,10 @@ def get_pending_interrupt(thread_id: str):
 def save_pending_interrupt(thread_id: str, interrupt_object) -> None:
     """
     Save the pending interrupt information inside Streamlit session state.
-    Prefers a human-readable 'message' field if the interrupt payload is a
-    dict, falling back to a plain string representation otherwise.
     """
-    value = interrupt_object.value
-    if isinstance(value, dict):
-        prompt_text = value.get("message", str(value))
-    else:
-        prompt_text = str(value)
-
     st.session_state["pending_hitl"] = {
         "thread_id": thread_id,
-        "prompt": prompt_text,
+        "prompt": str(interrupt_object.value),
     }
 
 
@@ -201,42 +193,50 @@ def resume_hitl_execution(decision: str) -> None:
     }
 
     try:
-        # NOTE: we do NOT call st.chat_message() / st.status() / st.write_stream()
-        # here anymore. This function runs while Streamlit's execution context
-        # is still inside the sidebar's `with st.sidebar:` block (because the
-        # Approve/Reject button that triggered this lives there). Rendering
-        # chat UI directly at this point makes it show up inside the sidebar
-        # instead of the main chat area. Instead, we just collect the resumed
-        # text quietly and let the normal message_history loop in the main
-        # body render it after st.rerun().
-        collected_chunks = []
+        # Display the resumed response
+        with st.chat_message("assistant"):
+            status_holder = {
+                "box": st.status(
+                    "🔄 Resuming the requested action...",
+                    expanded=True,
+                )
+            }
 
-        def resumed_ai_only_stream():
-            # Resume the graph with the human decision
-            for message_chunk, metadata in film_gpt.stream(
-                Command(resume=decision),
-                config=resume_config,
-                stream_mode="messages",
-            ):
-                # Stream only assistant-generated text (model-agnostic)
-                if isinstance(message_chunk, (AIMessage, AIMessageChunk)):
-                    text = extract_text_from_ai_message(message_chunk)
-                    if text:
-                        collected_chunks.append(text)
-                        yield text
+            def resumed_ai_only_stream():
+                # Resume the graph with the human decision
+                for message_chunk, metadata in film_gpt.stream(
+                    Command(resume=decision),
+                    config=resume_config,
+                    stream_mode="messages",
+                ):
+                    # Update tool execution status
+                    if isinstance(message_chunk, ToolMessage):
+                        tool_name = getattr(
+                            message_chunk,
+                            "name",
+                            "tool",
+                        )
+                        status_holder["box"].update(
+                            label=f"🔧 Using `{tool_name}` …",
+                            state="running",
+                            expanded=True,
+                        )
 
-        # Drain the generator so the graph actually resumes and runs to
-        # completion. We don't pass this to st.write_stream anymore since
-        # we're not rendering here — we just need the side effect (the
-        # tool executing) plus the collected text for message_history.
-        for _ in resumed_ai_only_stream():
-            pass
+                    # Stream only assistant-generated text (model-agnostic)
+                    if isinstance(message_chunk, (AIMessage, AIMessageChunk)):
+                        text = extract_text_from_ai_message(message_chunk)
+                        if text:
+                            yield text
 
-        ai_message = "".join(collected_chunks)
+            ai_message = st.write_stream(resumed_ai_only_stream())
 
-        # Save the resumed assistant response
-        # (this is what the main chat loop will render after st.rerun())
-        if ai_message:
+            status_holder["box"].update(
+                label="✅ Action finished",
+                state="complete",
+                expanded=False,
+            )
+
+            # Save the resumed assistant response
             st.session_state["message_history"].append(
                 {
                     "role": "assistant",
@@ -286,7 +286,6 @@ def extract_text_from_ai_message(message: Any) -> str:
 
     # Fallback: stringify whatever it is
     return str(content)
-    
 
 
 # ---------------------------------------------------------------------------
@@ -421,7 +420,6 @@ with st.sidebar:
                 use_container_width=True,
             ):
                 resume_hitl_execution("yes")
-                st.rerun()
 
         with reject_column:
             if st.button(
@@ -430,7 +428,6 @@ with st.sidebar:
                 use_container_width=True,
             ):
                 resume_hitl_execution("no")
-                st.rerun()
 
 
 # Main body: title and message history
@@ -485,9 +482,6 @@ if user_input:
                 config=CONFIG,
                 stream_mode="messages",
             ):
-                # NEW: figure out which graph node produced this chunk
-                node_name = metadata.get("langgraph_node") if metadata else None
-
                 # Create/update status when tools run
                 if isinstance(message_chunk, ToolMessage):
                     tool_name = getattr(message_chunk, "name", "tool")
@@ -503,14 +497,11 @@ if user_input:
                             expanded=True,
                         )
 
-                # Stream ONLY assistant text that came from chat_node
-                # (filters out the internal SQL-generation LLM call that
-                # also emits AIMessage chunks during the tool node's execution)
-                if node_name == "chat_node" and isinstance(message_chunk, (AIMessage, AIMessageChunk)):
+                # Stream ONLY assistant text, regardless of provider
+                if isinstance(message_chunk, (AIMessage, AIMessageChunk)):
                     text = extract_text_from_ai_message(message_chunk)
                     if text:
                         yield text
-
 
             # After streaming ends, check for pending interrupt
             pending_interrupt = get_pending_interrupt(
@@ -522,7 +513,7 @@ if user_input:
                     pending_interrupt,
                 )
                 yield (
-                    "⚠️ This action requires your approval. "
+                    "\n\n⚠️ This action requires your approval. "
                     "Use the Approve or Reject button in the sidebar."
                 )
 

@@ -3,7 +3,8 @@ from typing import Any, List
 
 hf_logging.set_verbosity_error()  # or set_verbosity_warning()
 
-from backend_local_llm import (film_gpt,
+from archive.backend import (
+    film_gpt,
     get_all_threads,
 )
 

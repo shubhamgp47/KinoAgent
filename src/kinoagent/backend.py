@@ -12,7 +12,7 @@ from langchain_core.tools import tool
 from langchain_tavily import TavilySearch
 import re
 
-from src.monitoring.metrics import (
+from monitoring.metrics import (
     start_metrics_endpoint,
     track_tool_metrics,
     CHAT_NODE_LATENCY,
@@ -22,6 +22,7 @@ from src.monitoring.metrics import (
 from langchain_ollama import ChatOllama
 
 import os
+from pathlib import Path
 from typing import Any, List
 
 import chromadb
@@ -48,16 +49,16 @@ load_dotenv()
     temperature=0.7,
 )'''
 
-'''llm = ChatGoogleGenerativeAI(
+llm = ChatGoogleGenerativeAI(
     model="gemini-3.1-flash-lite",
     temperature=0.7,
-)'''
+)
 
 # local llm
-llm = ChatOllama(
+'''llm = ChatOllama(
     model="qwen3:4b",
     temperature=0.7,
-)
+)'''
 
 # ---------------------------------------------------------------------------
 # ChromaDB setup: persistent client + embedding model + helpers
@@ -65,12 +66,18 @@ llm = ChatOllama(
 
 # Base data paths. Adjust if your project layout differs.
 #DATA_ROOT = os.getenv("FILMGPT_DATA_ROOT", "data")
-CHROMA_PATH = "C:\\Users\\shubh\\OneDrive\\Documents\\Tutorials\\FilmGPT\\FilmGPT\\data\\chroma_db"
-OSCARS_DB_PATH = "C:\\Users\\shubh\\OneDrive\\Documents\\Tutorials\\FilmGPT\\FilmGPT\\data\\oscars_db\\oscars.db"
+#CHROMA_PATH = "C:\\Users\\shubh\\OneDrive\\Documents\\Tutorials\\FilmGPT\\FilmGPT\\data\\chroma_db"
+#OSCARS_DB_PATH = "C:\\Users\\shubh\\OneDrive\\Documents\\Tutorials\\FilmGPT\\FilmGPT\\data\\oscars_db\\oscars.db"
 TMDB_V3_API_KEY = os.getenv("TMDB_V3_API_KEY")
 TMDB_SESSION_ID = os.getenv("TMDB_SESSION_ID")
 TMDB_ACCOUNT_ID = os.getenv("TMDB_ACCOUNT_ID")
 TMDB_BASE_URL = "https://api.themoviedb.org/3"
+CURRENT_FILE = Path(__file__).resolve()
+PROJECT_ROOT = CURRENT_FILE.parents[2]
+DATA_DIR = Path(os.getenv("KINOAGENT_DATA_DIR", PROJECT_ROOT / "data")).resolve()
+CHROMA_PATH = str(DATA_DIR / "chroma_db")
+OSCARS_DB_PATH = (DATA_DIR / "oscars_db" / "oscars.db").resolve()
+CHECKPOINT_DB_PATH = str(DATA_DIR / "kinoagent_state.db")
 
 # MLOps Telemetry Server
 # Starts a daemon thread serving metrics on http://localhost:8000
@@ -528,8 +535,11 @@ def ask_oscars_database_question(question: str) -> dict:
             "rows": [],
             "row_count": 0,
         }                               
-
-    db_uri = f"file:{OSCARS_DB_PATH}?mode=ro"
+    db_file = Path(OSCARS_DB_PATH).resolve()
+    if not db_file.is_file():
+        raise FileNotFoundError(f"Oscars database file missing at: {db_file}")
+    #db_uri = f"file:{OSCARS_DB_PATH}?mode=ro"
+    db_uri = f"{db_file.as_uri()}?mode=ro"
     conn = sqlite3.connect(db_uri, uri=True)
     try:
         cursor = conn.execute(sql)
@@ -851,8 +861,12 @@ def chat_node(state: ChatState) -> ChatState:
 tool_node = ToolNode(tools)
 
 # Sqlite-based checkpointing (thread persistence)
-conn = sqlite3.connect("film_gpt.db", check_same_thread=False)
-checkpoint = SqliteSaver(conn)
+#conn = sqlite3.connect("film_gpt.db", check_same_thread=False)
+#CHECKPOINT_DB_PATH = str(DATA_DIR / "kinoagent_state.db")
+#conn = sqlite3.connect(CHECKPOINT_DB_PATH, check_same_thread=False)
+checkpoint_conn = sqlite3.connect(CHECKPOINT_DB_PATH, check_same_thread=False)
+checkpoint = SqliteSaver(checkpoint_conn)
+#checkpoint = SqliteSaver(conn)
 
 # Build the graph with the same START -> chat -> tools_condition -> tools -> chat loop.
 graph = StateGraph(ChatState)
