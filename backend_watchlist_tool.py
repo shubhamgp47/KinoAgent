@@ -12,6 +12,12 @@ from langchain_core.tools import tool
 from langchain_tavily import TavilySearch
 import re
 
+from src.monitoring.metrics import (
+    start_metrics_endpoint,
+    track_tool_metrics,
+    CHAT_NODE_LATENCY,
+)
+
 # Local llm
 from langchain_ollama import ChatOllama
 
@@ -49,7 +55,7 @@ load_dotenv()
 
 # local llm
 llm = ChatOllama(
-    model="qwen3:8b",
+    model="qwen3:4b",
     temperature=0.7,
 )
 
@@ -65,6 +71,10 @@ TMDB_V3_API_KEY = os.getenv("TMDB_V3_API_KEY")
 TMDB_SESSION_ID = os.getenv("TMDB_SESSION_ID")
 TMDB_ACCOUNT_ID = os.getenv("TMDB_ACCOUNT_ID")
 TMDB_BASE_URL = "https://api.themoviedb.org/3"
+
+# MLOps Telemetry Server
+# Starts a daemon thread serving metrics on http://localhost:8000
+start_metrics_endpoint(port=8000)
 
 # Create a single persistent Chroma client for the whole backend.
 # This points at the folder with chroma.sqlite3 and HNSW index folders.
@@ -241,6 +251,7 @@ search_tool = TavilySearch(
 
 
 @tool
+@track_tool_metrics("personaltaste_retriever")
 def personaltaste_retriever(query: str) -> str:
     """
     Retrieve information about YOUR personal film taste, viewing history,
@@ -312,6 +323,7 @@ def personaltaste_retriever(query: str) -> str:
 
 
 @tool
+@track_tool_metrics("synopsis_retriever")
 def synopsis_retriever(query: str) -> str:
     """
     Retrieve TMDb-based factual and semantic information from the 'tmdb_synopsis'
@@ -492,6 +504,7 @@ def is_safe_sql(sql: str) -> bool:
     return True
 
 @tool
+@track_tool_metrics("ask_oscars_database_question")
 def ask_oscars_database_question(question: str) -> dict:
     """
     Answer questions about Oscar nominations and wins using a local SQLite database.
@@ -536,6 +549,7 @@ def ask_oscars_database_question(question: str) -> dict:
     }
 
 @tool
+@track_tool_metrics("update_tmdb_watchlist")
 def update_tmdb_watchlist(
     film_title: str,
     action: Literal["add", "remove"],
@@ -606,6 +620,7 @@ def update_tmdb_watchlist(
     return f"'{match['title']}' ({match['year']}) has been {verb_past} your TMDb watchlist."
 
 @tool
+@track_tool_metrics("get_watchlist_summary")
 def get_watchlist_summary(list_titles: bool = False) -> str:
     """
     Get the number of films on the user's TMDb watchlist, and optionally
@@ -636,6 +651,7 @@ def get_watchlist_summary(list_titles: bool = False) -> str:
     return f"There are {count} film(s) on your TMDb watchlist:\n{listing}"
 
 @tool
+@track_tool_metrics("tmdb_movie_lookup")
 def tmdb_movie_lookup(film_title: str) -> str:
     """
     Look up ANY film on TMDb's full catalog and return its details:
@@ -822,10 +838,13 @@ def chat_node(state: ChatState) -> ChatState:
 )
 
     messages = [system_message] + state["messages"]
-    response = llm_with_tools.invoke(messages)
+    #response = llm_with_tools.invoke(messages)
 
-    return {"messages": state["messages"] + [response]}
-    #return {"messages": [response]}
+    with CHAT_NODE_LATENCY.time():
+        response = llm_with_tools.invoke(messages)
+
+    #return {"messages": state["messages"] + [response]}
+    return {"messages": [response]}
 
 
 # Single ToolNode that executes whichever tool the LLM requested.

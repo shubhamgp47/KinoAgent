@@ -30,3 +30,7 @@ torchvision
 beautifulsoup4
 langchain-ollama
 ollama
+
+# MLOps and monitoring
+prometheus-client
+mlflow
