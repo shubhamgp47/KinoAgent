@@ -233,3 +233,8 @@ __pycache__/
 .env
 .venv/
 venv/
+
+# MLflow tracking SQLite database
+mlflow.db
+mlartifacts/
+

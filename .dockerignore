@@ -1,0 +1,23 @@
+# Ignore local environment & secrets
+.env
+.venv/
+venv/
+
+# Ignore Python bytecode
+__pycache__/
+*.py[cod]
+
+# Ignore transient databases, checkpoints, and tracking stores
+*.db
+*.db-shm
+*.db-wal
+*.sqlite3
+mlruns/
+mlartifacts/
+
+# Ignore development folders
+archive/
+src/test_scripts/
+tests/
+.git/
+.gitignore

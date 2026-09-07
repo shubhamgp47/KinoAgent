@@ -1,9 +1,18 @@
-from transformers.utils import logging as hf_logging
+import sys
+from pathlib import Path
+
+# Add project root (KinoAgent/) to sys.path so 'src.kinoagent...' imports always resolve
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
+#from transformers.utils import logging as hf_logging
 from typing import Any, List
 
-hf_logging.set_verbosity_error()  # or set_verbosity_warning()
+#hf_logging.set_verbosity_error()
 
-from backend import (film_gpt,
+from src.kinoagent.backend import (
+    film_gpt,
     get_all_threads,
 )
 

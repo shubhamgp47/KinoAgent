@@ -32,3 +32,17 @@ These are categorical/exhaustive questions, which is exactly the Nolan case:
 "List every film I've watched from the 1990s." — a date range filter, not semantic.
 
 "Which actor appears most often in my watched films?" — an aggregation, which vector search fundamentally can't do.
+
+Prometheus runs on 9090
+Grafana runs on 3000
+Streamlit application runs on 8501
+Prometheus pulls data on 8000
+
+
+To run mlflow tests - python -m evals.run_evals
+
+to view mlflow UI - mlflow ui --backend-store-uri sqlite:///mlflow.db --port 5000 --host 127.0.0.1 --workers 1
+
+build docker locally to verify no missing files or paths- docker build -t kinoagent:latest .
+
+run the container locally - docker run -p 8501:8501 -p 8000:8000 --env-file .env kinoagent:latest or docker build --progress=plain -t kinoagent:latest .

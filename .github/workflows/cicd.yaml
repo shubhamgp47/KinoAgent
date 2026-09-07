@@ -1,0 +1,47 @@
+name: KinoAgent CI/CD Pipeline
+
+on:
+  push:
+    branches: [ "main", "feature/*" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  test-and-evaluate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Evals Suite (Model CI Gate)
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          TMDB_V3_API_KEY: ${{ secrets.TMDB_V3_API_KEY }}
+          TMDB_ACCOUNT_ID: ${{ secrets.TMDB_ACCOUNT_ID }}
+          TMDB_SESSION_ID: ${{ secrets.TMDB_SESSION_ID }}
+        run: |
+          # Executes offline evaluation against golden dataset
+          python -m evals.run_evals
+
+  deploy-to-render:
+    needs: test-and-evaluate
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger Render Deploy Hook
+        run: |
+          # Invokes Render Deploy Hook to rebuild and roll out container
+          curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK_URL }}"

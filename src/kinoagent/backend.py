@@ -11,8 +11,14 @@ from langgraph.prebuilt import ToolNode, tools_condition
 from langchain_core.tools import tool
 from langchain_tavily import TavilySearch
 import re
+import sys
+from pathlib import Path
 
-from monitoring.metrics import (
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
+from src.kinoagent.monitoring.metrics import (
     start_metrics_endpoint,
     track_tool_metrics,
     CHAT_NODE_LATENCY,
@@ -22,7 +28,6 @@ from monitoring.metrics import (
 from langchain_ollama import ChatOllama
 
 import os
-from pathlib import Path
 from typing import Any, List
 
 import chromadb
@@ -411,15 +416,15 @@ def synopsis_retriever(query: str) -> str:
 
 
 # A small, focused LLM just for SQL generation
-sql_llm = ChatOllama(
+'''sql_llm = ChatOllama(
     model="qwen3:4b",
     temperature=0.0,
-)
-
-'''sql_llm = ChatGoogleGenerativeAI(
-    model="gemini-2.5-flash",
-    temperature=0.0,
 )'''
+
+sql_llm = ChatGoogleGenerativeAI(
+    model="gemini-3.1-flash-lite",
+    temperature=0.0,
+)
 
 OSCARS_SCHEMA_PROMPT = """
 Return exactly one valid SQLite SELECT statement and nothing else.
@@ -470,7 +475,7 @@ User question:
 """
 
 # To generate sql select query to answer a user question about Oscars nominations/wins.
-def generate_oscars_sql(question: str) -> str:
+'''def generate_oscars_sql(question: str) -> str:
     prompt = OSCARS_SCHEMA_PROMPT.format(question=question)
     response = sql_llm.invoke(prompt)
 
@@ -491,6 +496,40 @@ def generate_oscars_sql(question: str) -> str:
     # Retain one statement only and remove its optional terminal semicolon.
     if ";" in sql:
         sql = sql.split(";", 1).strip()
+
+    return sql'''
+def generate_oscars_sql(question: str) -> str:
+    prompt = OSCARS_SCHEMA_PROMPT.format(question=question)
+    response = sql_llm.invoke(prompt)
+
+    # 1. Safely extract raw text regardless of provider (Ollama string vs Gemini list)
+    if isinstance(response.content, str):
+        raw_output = response.content
+    elif isinstance(response.content, list):
+        # Gemini multi-part / thought payload
+        text_parts = []
+        for part in response.content:
+            if isinstance(part, str):
+                text_parts.append(part)
+            elif isinstance(part, dict) and "text" in part:
+                text_parts.append(part["text"])
+        raw_output = "".join(text_parts)
+    else:
+        raw_output = str(response.content)
+
+    # 2. Clean out code fences
+    raw_output = raw_output.replace("```sql", "").replace("```SQL", "").replace("```", "").strip()
+
+    # 3. Discard any preamble before SELECT
+    select_index = raw_output.upper().find("SELECT")
+    if select_index == -1:
+        return raw_output
+
+    sql = raw_output[select_index:].strip()
+
+    # 4. Safely drop terminal semicolon (index [0] first, THEN strip)
+    if ";" in sql:
+        sql = sql.split(";", 1)[0].strip()
 
     return sql
 
