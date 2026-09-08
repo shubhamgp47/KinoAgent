@@ -227,3 +227,10 @@ __pycache__/
 venv/
 
 mlflow.db
+
+*.db-wal
+*.db-shm
+*state.db
+film_gpt.db
+mlflow.db
+ci_mlflow.db
