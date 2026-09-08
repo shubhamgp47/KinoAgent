@@ -217,24 +217,11 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
-# SQLite Checkpointers and Ephemeral Write-Ahead Logs
-*.db
-*.db-wal
-*.db-shm
-*.sqlite3
-
 data/tmdb_processed_data/tmdb_cache.json
 
-# Vector Store Indices
-data/chroma_db/
 
 __pycache__/
 *.py[cod]
 .env
 .venv/
 venv/
-
-# MLflow tracking SQLite database
-mlflow.db
-mlartifacts/
-

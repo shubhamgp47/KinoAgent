@@ -19,13 +19,13 @@
   },
   {
     "id": "tc_04",
-    "query": "What are my favorite crime movies that I've reviewed?",
+    "query": "Tell me one crime movie that I've reviewed?",
     "expected_tool": "personaltaste_retriever",
     "expected_sql_fragment": null
   },
   {
     "id": "tc_05",
-    "query": "What movies are currently on my TMDb watchlist?",
+    "query": "How many movies are currently on my TMDb watchlist?",
     "expected_tool": "get_watchlist_summary",
     "expected_sql_fragment": null
   },
