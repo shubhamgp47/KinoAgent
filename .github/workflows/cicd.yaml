@@ -31,6 +31,13 @@ jobs:
           TMDB_V3_API_KEY: ${{ secrets.TMDB_V3_API_KEY }}
           TMDB_ACCOUNT_ID: ${{ secrets.TMDB_ACCOUNT_ID }}
           TMDB_SESSION_ID: ${{ secrets.TMDB_SESSION_ID }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          LANGSMITH_TRACING: ${{ secrets.LANGSMITH_TRACING }}
+          LANGSMITH_ENDPOINT: ${{ secrets.LANGSMITH_ENDPOINT }}
+          LANGSMITH_API_KEY: ${{ secrets.LANGSMITH_API_KEY }}
+          LANGSMITH_PROJECT: ${{ secrets.LANGSMITH_PROJECT }}
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+          TMDB_BASE_URL: ${{ secrets.TMDB_BASE_URL }}
         run: |
           # Executes offline evaluation against golden dataset
           python -m evals.run_evals
