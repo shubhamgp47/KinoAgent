@@ -46,3 +46,7 @@ to view mlflow UI - mlflow ui --backend-store-uri sqlite:///mlflow.db --port 500
 build docker locally to verify no missing files or paths- docker build -t kinoagent:latest .
 
 run the container locally - docker run -p 8501:8501 -p 8000:8000 --env-file .env kinoagent:latest or docker build --progress=plain -t kinoagent:latest .
+
+run it locally - docker run --rm -it -p 8501:8501 -p 8000:8000 --env-file .env --name kinoagent-test kinoagent:latest
+
+test

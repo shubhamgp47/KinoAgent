@@ -27,7 +27,7 @@ jobs:
 
       - name: Run Evals Suite (Model CI Gate)
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
           TMDB_V3_API_KEY: ${{ secrets.TMDB_V3_API_KEY }}
           TMDB_ACCOUNT_ID: ${{ secrets.TMDB_ACCOUNT_ID }}
           TMDB_SESSION_ID: ${{ secrets.TMDB_SESSION_ID }}
