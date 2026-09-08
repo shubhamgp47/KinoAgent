@@ -3,8 +3,7 @@ from typing import Any, List
 
 hf_logging.set_verbosity_error()  # or set_verbosity_warning()
 
-from backend import (
-    film_gpt,
+from archive.backend_local_llm_oscar_tool import (film_gpt,
     get_all_threads,
 )
 
@@ -287,6 +286,7 @@ def extract_text_from_ai_message(message: Any) -> str:
 
     # Fallback: stringify whatever it is
     return str(content)
+    
 
 
 # ---------------------------------------------------------------------------
@@ -483,6 +483,9 @@ if user_input:
                 config=CONFIG,
                 stream_mode="messages",
             ):
+                # NEW: figure out which graph node produced this chunk
+                node_name = metadata.get("langgraph_node") if metadata else None
+
                 # Create/update status when tools run
                 if isinstance(message_chunk, ToolMessage):
                     tool_name = getattr(message_chunk, "name", "tool")
@@ -498,11 +501,14 @@ if user_input:
                             expanded=True,
                         )
 
-                # Stream ONLY assistant text, regardless of provider
-                if isinstance(message_chunk, (AIMessage, AIMessageChunk)):
+                # Stream ONLY assistant text that came from chat_node
+                # (filters out the internal SQL-generation LLM call that
+                # also emits AIMessage chunks during the tool node's execution)
+                if node_name == "chat_node" and isinstance(message_chunk, (AIMessage, AIMessageChunk)):
                     text = extract_text_from_ai_message(message_chunk)
                     if text:
                         yield text
+
 
             # After streaming ends, check for pending interrupt
             pending_interrupt = get_pending_interrupt(
@@ -514,7 +520,7 @@ if user_input:
                     pending_interrupt,
                 )
                 yield (
-                    "\n\n⚠️ This action requires your approval. "
+                    "\\n\\n⚠️ This action requires your approval. "
                     "Use the Approve or Reject button in the sidebar."
                 )
 

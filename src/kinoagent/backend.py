@@ -11,6 +11,18 @@ from langgraph.prebuilt import ToolNode, tools_condition
 from langchain_core.tools import tool
 from langchain_tavily import TavilySearch
 import re
+import sys
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
+from src.kinoagent.monitoring.metrics import (
+    start_metrics_endpoint,
+    track_tool_metrics,
+    CHAT_NODE_LATENCY,
+)
 
 # Local llm
 from langchain_ollama import ChatOllama
@@ -42,16 +54,16 @@ load_dotenv()
     temperature=0.7,
 )'''
 
-'''llm = ChatGoogleGenerativeAI(
+llm = ChatGoogleGenerativeAI(
     model="gemini-3.1-flash-lite",
     temperature=0.7,
-)'''
+)
 
 # local llm
-llm = ChatOllama(
-    model="qwen3:8b",
+'''llm = ChatOllama(
+    model="qwen3:4b",
     temperature=0.7,
-)
+)'''
 
 # ---------------------------------------------------------------------------
 # ChromaDB setup: persistent client + embedding model + helpers
@@ -59,12 +71,22 @@ llm = ChatOllama(
 
 # Base data paths. Adjust if your project layout differs.
 #DATA_ROOT = os.getenv("FILMGPT_DATA_ROOT", "data")
-CHROMA_PATH = "C:\\Users\\shubh\\OneDrive\\Documents\\Tutorials\\FilmGPT\\FilmGPT\\data\\chroma_db"
-OSCARS_DB_PATH = "C:\\Users\\shubh\\OneDrive\\Documents\\Tutorials\\FilmGPT\\FilmGPT\\data\\oscars_db\\oscars.db"
+#CHROMA_PATH = "C:\\Users\\shubh\\OneDrive\\Documents\\Tutorials\\FilmGPT\\FilmGPT\\data\\chroma_db"
+#OSCARS_DB_PATH = "C:\\Users\\shubh\\OneDrive\\Documents\\Tutorials\\FilmGPT\\FilmGPT\\data\\oscars_db\\oscars.db"
 TMDB_V3_API_KEY = os.getenv("TMDB_V3_API_KEY")
 TMDB_SESSION_ID = os.getenv("TMDB_SESSION_ID")
 TMDB_ACCOUNT_ID = os.getenv("TMDB_ACCOUNT_ID")
 TMDB_BASE_URL = "https://api.themoviedb.org/3"
+CURRENT_FILE = Path(__file__).resolve()
+PROJECT_ROOT = CURRENT_FILE.parents[2]
+DATA_DIR = Path(os.getenv("KINOAGENT_DATA_DIR", PROJECT_ROOT / "data")).resolve()
+CHROMA_PATH = str(DATA_DIR / "chroma_db")
+OSCARS_DB_PATH = (DATA_DIR / "oscars_db" / "oscars.db").resolve()
+CHECKPOINT_DB_PATH = str(DATA_DIR / "kinoagent_state.db")
+
+# MLOps Telemetry Server
+# Starts a daemon thread serving metrics on http://localhost:8000
+start_metrics_endpoint(port=8000)
 
 # Create a single persistent Chroma client for the whole backend.
 # This points at the folder with chroma.sqlite3 and HNSW index folders.
@@ -241,6 +263,7 @@ search_tool = TavilySearch(
 
 
 @tool
+@track_tool_metrics("personaltaste_retriever")
 def personaltaste_retriever(query: str) -> str:
     """
     Retrieve information about YOUR personal film taste, viewing history,
@@ -312,6 +335,7 @@ def personaltaste_retriever(query: str) -> str:
 
 
 @tool
+@track_tool_metrics("synopsis_retriever")
 def synopsis_retriever(query: str) -> str:
     """
     Retrieve TMDb-based factual and semantic information from the 'tmdb_synopsis'
@@ -392,15 +416,15 @@ def synopsis_retriever(query: str) -> str:
 
 
 # A small, focused LLM just for SQL generation
-sql_llm = ChatOllama(
+'''sql_llm = ChatOllama(
     model="qwen3:4b",
     temperature=0.0,
-)
-
-'''sql_llm = ChatGoogleGenerativeAI(
-    model="gemini-2.5-flash",
-    temperature=0.0,
 )'''
+
+sql_llm = ChatGoogleGenerativeAI(
+    model="gemini-3.1-flash-lite",
+    temperature=0.0,
+)
 
 OSCARS_SCHEMA_PROMPT = """
 Return exactly one valid SQLite SELECT statement and nothing else.
@@ -451,7 +475,7 @@ User question:
 """
 
 # To generate sql select query to answer a user question about Oscars nominations/wins.
-def generate_oscars_sql(question: str) -> str:
+'''def generate_oscars_sql(question: str) -> str:
     prompt = OSCARS_SCHEMA_PROMPT.format(question=question)
     response = sql_llm.invoke(prompt)
 
@@ -473,6 +497,40 @@ def generate_oscars_sql(question: str) -> str:
     if ";" in sql:
         sql = sql.split(";", 1).strip()
 
+    return sql'''
+def generate_oscars_sql(question: str) -> str:
+    prompt = OSCARS_SCHEMA_PROMPT.format(question=question)
+    response = sql_llm.invoke(prompt)
+
+    # 1. Safely extract raw text regardless of provider (Ollama string vs Gemini list)
+    if isinstance(response.content, str):
+        raw_output = response.content
+    elif isinstance(response.content, list):
+        # Gemini multi-part / thought payload
+        text_parts = []
+        for part in response.content:
+            if isinstance(part, str):
+                text_parts.append(part)
+            elif isinstance(part, dict) and "text" in part:
+                text_parts.append(part["text"])
+        raw_output = "".join(text_parts)
+    else:
+        raw_output = str(response.content)
+
+    # 2. Clean out code fences
+    raw_output = raw_output.replace("```sql", "").replace("```SQL", "").replace("```", "").strip()
+
+    # 3. Discard any preamble before SELECT
+    select_index = raw_output.upper().find("SELECT")
+    if select_index == -1:
+        return raw_output
+
+    sql = raw_output[select_index:].strip()
+
+    # 4. Safely drop terminal semicolon (index [0] first, THEN strip)
+    if ";" in sql:
+        sql = sql.split(";", 1)[0].strip()
+
     return sql
 
 def is_safe_sql(sql: str) -> bool:
@@ -492,6 +550,7 @@ def is_safe_sql(sql: str) -> bool:
     return True
 
 @tool
+@track_tool_metrics("ask_oscars_database_question")
 def ask_oscars_database_question(question: str) -> dict:
     """
     Answer questions about Oscar nominations and wins using a local SQLite database.
@@ -515,8 +574,11 @@ def ask_oscars_database_question(question: str) -> dict:
             "rows": [],
             "row_count": 0,
         }                               
-
-    db_uri = f"file:{OSCARS_DB_PATH}?mode=ro"
+    db_file = Path(OSCARS_DB_PATH).resolve()
+    if not db_file.is_file():
+        raise FileNotFoundError(f"Oscars database file missing at: {db_file}")
+    #db_uri = f"file:{OSCARS_DB_PATH}?mode=ro"
+    db_uri = f"{db_file.as_uri()}?mode=ro"
     conn = sqlite3.connect(db_uri, uri=True)
     try:
         cursor = conn.execute(sql)
@@ -536,6 +598,7 @@ def ask_oscars_database_question(question: str) -> dict:
     }
 
 @tool
+@track_tool_metrics("update_tmdb_watchlist")
 def update_tmdb_watchlist(
     film_title: str,
     action: Literal["add", "remove"],
@@ -606,6 +669,7 @@ def update_tmdb_watchlist(
     return f"'{match['title']}' ({match['year']}) has been {verb_past} your TMDb watchlist."
 
 @tool
+@track_tool_metrics("get_watchlist_summary")
 def get_watchlist_summary(list_titles: bool = False) -> str:
     """
     Get the number of films on the user's TMDb watchlist, and optionally
@@ -636,6 +700,7 @@ def get_watchlist_summary(list_titles: bool = False) -> str:
     return f"There are {count} film(s) on your TMDb watchlist:\n{listing}"
 
 @tool
+@track_tool_metrics("tmdb_movie_lookup")
 def tmdb_movie_lookup(film_title: str) -> str:
     """
     Look up ANY film on TMDb's full catalog and return its details:
@@ -822,18 +887,25 @@ def chat_node(state: ChatState) -> ChatState:
 )
 
     messages = [system_message] + state["messages"]
-    response = llm_with_tools.invoke(messages)
+    #response = llm_with_tools.invoke(messages)
 
-    return {"messages": state["messages"] + [response]}
-    #return {"messages": [response]}
+    with CHAT_NODE_LATENCY.time():
+        response = llm_with_tools.invoke(messages)
+
+    #return {"messages": state["messages"] + [response]}
+    return {"messages": [response]}
 
 
 # Single ToolNode that executes whichever tool the LLM requested.
 tool_node = ToolNode(tools)
 
 # Sqlite-based checkpointing (thread persistence)
-conn = sqlite3.connect("film_gpt.db", check_same_thread=False)
-checkpoint = SqliteSaver(conn)
+#conn = sqlite3.connect("film_gpt.db", check_same_thread=False)
+#CHECKPOINT_DB_PATH = str(DATA_DIR / "kinoagent_state.db")
+#conn = sqlite3.connect(CHECKPOINT_DB_PATH, check_same_thread=False)
+checkpoint_conn = sqlite3.connect(CHECKPOINT_DB_PATH, check_same_thread=False)
+checkpoint = SqliteSaver(checkpoint_conn)
+#checkpoint = SqliteSaver(conn)
 
 # Build the graph with the same START -> chat -> tools_condition -> tools -> chat loop.
 graph = StateGraph(ChatState)

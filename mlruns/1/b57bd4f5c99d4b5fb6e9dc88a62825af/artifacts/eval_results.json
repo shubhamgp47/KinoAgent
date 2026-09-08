@@ -1,0 +1,66 @@
+[
+  {
+    "id": "tc_01",
+    "query": "How many Oscars has Leonardo DiCaprio won?",
+    "expected_tool": "ask_oscars_database_question",
+    "actual_tools": [
+      "ask_oscars_database_question"
+    ],
+    "routing_pass": true,
+    "sql_status": "PASS",
+    "latency_sec": 27.09
+  },
+  {
+    "id": "tc_02",
+    "query": "Did Zodiac win any Oscars?",
+    "expected_tool": "ask_oscars_database_question",
+    "actual_tools": [
+      "ask_oscars_database_question"
+    ],
+    "routing_pass": true,
+    "sql_status": "PASS",
+    "latency_sec": 19.2
+  },
+  {
+    "id": "tc_03",
+    "query": "Find me psychological thrillers similar to Zodiac.",
+    "expected_tool": "synopsis_retriever",
+    "actual_tools": [
+      "synopsis_retriever"
+    ],
+    "routing_pass": true,
+    "sql_status": "N/A",
+    "latency_sec": 63.83
+  },
+  {
+    "id": "tc_04",
+    "query": "What are my favorite crime movies that I've reviewed?",
+    "expected_tool": "personaltaste_retriever",
+    "actual_tools": [],
+    "routing_pass": false,
+    "sql_status": "N/A",
+    "latency_sec": 44.38
+  },
+  {
+    "id": "tc_05",
+    "query": "What movies are currently on my TMDb watchlist?",
+    "expected_tool": "get_watchlist_summary",
+    "actual_tools": [
+      "get_watchlist_summary"
+    ],
+    "routing_pass": true,
+    "sql_status": "N/A",
+    "latency_sec": 60.68
+  },
+  {
+    "id": "tc_06",
+    "query": "Tell me about the director and cast of Inception.",
+    "expected_tool": "tmdb_movie_lookup",
+    "actual_tools": [
+      "synopsis_retriever"
+    ],
+    "routing_pass": false,
+    "sql_status": "N/A",
+    "latency_sec": 74.77
+  }
+]

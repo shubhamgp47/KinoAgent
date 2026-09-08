@@ -217,8 +217,13 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
-# sqlite database files
-*.db
-*.sqlite3
-
 data/tmdb_processed_data/tmdb_cache.json
+
+
+__pycache__/
+*.py[cod]
+.env
+.venv/
+venv/
+
+mlflow.db
