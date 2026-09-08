@@ -225,3 +225,5 @@ __pycache__/
 .env
 .venv/
 venv/
+
+mlflow.db
