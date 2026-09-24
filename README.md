@@ -9,7 +9,7 @@
 
 **KinoAgent** is an agentic AI system engineered with **LangGraph**, combining semantic vector retrieval, Text-to-SQL generation over historical awards dataset, real-time REST API mutations with Human-in-the-Loop (HITL) approval, and MLOps telemetry.
 
-**KinoAgent** creates personal vector embeddings directly from a user's Letterboxd export data (capturing personal ratings, diary dates, and reviews) while referencing an enriched TMDb semantic catalog. For watchlist updates, it links to the user's live TMDb account to execute watchlist additions and removals—gated explicitly by stateful HITL authorization via LangGraph interrupt() checkpoints. The system enforces reliability through an automated offline evaluation gate in CI/CD, defensive SQL validation, stream-level token isolation, and real-time metric instrumentation via Prometheus, Grafana, and MLflow.
+**KinoAgent** creates personal vector embeddings directly from a user's Letterboxd export data (capturing personal ratings, diary dates, and reviews) while referencing an enriched TMDb semantic catalog. For watchlist updates, it links to the user's live TMDb account to execute watchlist additions and removals gated explicitly by HITL authorization via LangGraph interrupt() checkpoints. The system enforces reliability through an automated offline evaluation gate in CI/CD, defensive SQL validation, stream-level token isolation, and real-time metric instrumentation via Prometheus, Grafana, and MLflow.
 
 ---
 
@@ -155,34 +155,13 @@ git push / PR
 
 | Domain | Technologies |
 |---|---|
-| **Agent Framework** | LangGraph, LangChain Core, Pydantic |
+| **Agent Framework** | LangGraph, LangChain Core |
 | **LLM Backends** | Google Gemini (`gemini-2.5-flash`, `gemini-3.1-flash-lite`), Ollama (`qwen3:4b`), Groq |
 | **Vector DB & Search**| ChromaDB, `sentence-transformers` (`all-MiniLM-L6-v2`), SQLite |
 | **Data & APIs** | TMDb API v3, Kaggle Oscars Dataset, Letterboxd Exports, Tavily API |
 | **Monitoring & MLOps**| Prometheus, Grafana, MLflow, LangSmith |
 | **Frontend** | Streamlit (Custom token streaming, Session State persistence, HITL UI) |
 | **DevOps & Cloud** | Docker (multi-stage build), GitHub Actions CI/CD, Render Cloud |
-
----
-
-##  Systems Engineering Case Study: Memory Optimization & Cloud OOM
-
-During cloud deployment to Render's free tier (512 MB RAM ceiling), KinoAgent encountered an immediate Out-Of-Memory (OOM) kernel kill:
-
-### Root Cause Analysis
-* Python 3.11 Base + Streamlit: `~200 MB`
-* C++ PyTorch CPU Shared Libraries: `~220 MB`
-* ChromaDB Rust Bindings + Dual HNSW Caches: `~120 MB`
-* In-Memory `all-MiniLM-L6-v2` SentenceTransformer Model: `~100 MB`
-* Background Prometheus Telemetry Thread: `~40 MB`
-* **Total RSS at Startup:** `~680 MB` $\rightarrow$ **Exceeded 512 MB Free Tier**
-
-### Architectural Solutions & Trade-Offs
-
-| Approach | Architecture Change | RAM Impact | Trade-Off |
-|---|---|---|---|
-| **A. Offload Embeddings to Managed Cloud API** | Replace local `sentence-transformers` with Google Gemini / Vertex Embeddings; strip `torch` from container. | Reduces image RSS to **~180 MB** (fits comfortably in 512 MB). | Introduces network latency per embedding and external API token cost. |
-| **B. Vertical Infrastructure Scaling** | Deploy container to Render Starter / AWS EC2 with configured Swap Space. | Accommodates local PyTorch execution (`1–2 GB` overhead). | Compute infrastructure hosting cost ($7/mo or cloud instance). |
 
 ---
 
@@ -194,7 +173,10 @@ git clone https://github.com/your-username/KinoAgent.git
 cd KinoAgent
 
 python -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+# Windows:
+.venv\Scripts\activate
+# Linux/macOS:
+source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
@@ -206,21 +188,50 @@ TMDB_V3_API_KEY=your_tmdb_api_key
 TMDB_ACCOUNT_ID=your_tmdb_account_id
 TMDB_SESSION_ID=your_tmdb_session_id
 TAVILY_API_KEY=your_tavily_api_key
+LANGSMITH_TRACING=true
+LANGSMITH_ENDPOINT=langsmith_endpoint
+LANGSMITH_API_KEY=your_langsmith_api_key
+LANGSMITH_PROJECT=project_name
 ```
 
-### 3. Run Locally
+### 3. Data Ingestion: Building the Local Vector Store & Database Fixtures
+
+KinoAgent relies on two deterministic ChromaDB vector collections (`letterboxd_personal` and `tmdb_synopsis`) along with a local SQLite database (`oscars.db`). Follow these steps to build the local artifacts:
+
+#### Step A: Export Your Letterboxd History
+1. Log into [Letterboxd](https://letterboxd.com/) and navigate to **Settings → Import & Export**.
+2. Click **Export Your Data** and unpack the downloaded `.zip` file.
+3. Locate `diary.csv` and `ratings.csv`, and place them inside the `data/letterboxd_processed_data/` directory[cite: 2].
+
+#### Step B: Execute the Ingestion Pipeline
+Run the builder scripts in sequence from the project root[cite: 2]:
+
+```bash
+# 1. Match Letterboxd records with TMDb metadata and generate personal_films_compact.jsonl
+python src/create_compact_films.py
+
+# 2. Embed personal viewing history & reviews into ChromaDB (collection: letterboxd_personal)
+python src/build_letterboxd_chroma.py
+
+# 3. Embed factual movie synopses, genres, & cast into ChromaDB (collection: tmdb_synopsis)
+python src/build_tmdb_chroma.py
+
+# 4. Ingest Kaggle Oscars records into local read-only SQLite database (data/oscars_db/oscars.db)
+python src/build_oscars_db.py
+
+### 5. Run Locally
 ```bash
 streamlit run src/kinoagent/app.py
 ```
 Open [http://localhost:8501](http://localhost:8501) to interact with KinoAgent.  
 Prometheus telemetry metrics are exposed concurrently on [http://localhost:8000/metrics](http://localhost:8000/metrics).
 
-### 4. Run Evaluation Suite
+### 6. Run Evaluation Suite
 ```bash
 python -m evals.run_evals
 ```
 
-### 5. Run via Docker
+### 7. Run via Docker
 ```bash
 docker build -t kinoagent:latest .
 docker run -p 8501:8501 -p 8000:8000 --env-file .env kinoagent:latest
