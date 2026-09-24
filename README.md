@@ -201,23 +201,10 @@ KinoAgent relies on two deterministic ChromaDB vector collections (`letterboxd_p
 #### Step A: Export Your Letterboxd History
 1. Log into [Letterboxd](https://letterboxd.com/) and navigate to **Settings → Import & Export**.
 2. Click **Export Your Data** and unpack the downloaded `.zip` file.
-3. Locate `diary.csv` and `ratings.csv`, and place them inside the `data/letterboxd_processed_data/` directory[cite: 2].
+3. Locate `diary.csv` and `ratings.csv`, and place them inside the `data/letterboxd_raw_data/` directory.
 
 #### Step B: Execute the Ingestion Pipeline
-Run the builder scripts in sequence from the project root[cite: 2]:
-
-```bash
-# 1. Match Letterboxd records with TMDb metadata and generate personal_films_compact.jsonl
-python src/create_compact_films.py
-
-# 2. Embed personal viewing history & reviews into ChromaDB (collection: letterboxd_personal)
-python src/build_letterboxd_chroma.py
-
-# 3. Embed factual movie synopses, genres, & cast into ChromaDB (collection: tmdb_synopsis)
-python src/build_tmdb_chroma.py
-
-# 4. Ingest Kaggle Oscars records into local read-only SQLite database (data/oscars_db/oscars.db)
-python src/build_oscars_db.py
+Run the builder scripts present in scripts/
 
 ### 5. Run Locally
 ```bash
