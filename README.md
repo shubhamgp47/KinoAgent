@@ -1,4 +1,4 @@
-# 🎬 KinoAgent: Production-Grade Agentic Film Intelligence System
+# 🎬 KinoAgent: Agentic Film Intelligence System
 
 [![CI/CD Pipeline](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)](.github/workflows/ci.yml)
 [![LangGraph](https://img.shields.io/badge/Orchestration-LangGraph%20v0.2-FF6F00?style=for-the-badge&logo=python&logoColor=white)](https://langchain-ai.github.io/langgraph/)
@@ -7,9 +7,9 @@
 [![Tracking](https://img.shields.io/badge/Evaluation-MLflow-0194E2?style=for-the-badge&logo=mlflow&logoColor=white)](https://mlflow.org/)
 [![Docker](https://img.shields.io/badge/Container-Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](Dockerfile)
 
-**KinoAgent** is an agentic AI system engineered with **LangGraph**, combining dual-collection semantic vector retrieval, sandboxed Text-to-SQL generation over historical awards data, real-time REST API mutations with Human-in-the-Loop (HITL) approval, and production-grade MLOps telemetry.
+**KinoAgent** is an agentic AI system engineered with **LangGraph**, combining semantic vector retrieval, Text-to-SQL generation over historical awards dataset, real-time REST API mutations with Human-in-the-Loop (HITL) approval, and MLOps telemetry.
 
-Unlike toy chatbot demos, KinoAgent features a strict **automated evaluation gate in CI/CD**, defensive SQL validation, stream-level token isolation, and real-time metric instrumentation via Prometheus and Grafana.
+**KinoAgent** creates personal vector embeddings directly from a user's Letterboxd export data (capturing personal ratings, diary dates, and reviews) while referencing an enriched TMDb semantic catalog. For watchlist updates, it links to the user's live TMDb account to execute watchlist additions and removals—gated explicitly by stateful HITL authorization via LangGraph interrupt() checkpoints. The system enforces reliability through an automated offline evaluation gate in CI/CD, defensive SQL validation, stream-level token isolation, and real-time metric instrumentation via Prometheus, Grafana, and MLflow.
 
 ---
 
@@ -18,7 +18,7 @@ Unlike toy chatbot demos, KinoAgent features a strict **automated evaluation gat
 ```text
                                   +---------------------------------------+
                                   |         Streamlit Frontend UI         |
-                                  | (Token Isolation & HITL Interruption) |
+                                  |                                       |
                                   +-------------------+-------------------+
                                                       |
                                                       | Webhook / Chat Stream
@@ -33,12 +33,12 @@ Unlike toy chatbot demos, KinoAgent features a strict **automated evaluation gat
                     v                                 v                                 v
      [ Semantic Vector Search ]             [ Constrained Text-to-SQL ]       [ Live Services & Web ]
                     |                                 |                                 |
-        +-----------+-----------+                     | (AST / Regex Guard)             |
+        +-----------+-----------+                     | (Regex Guard)                   |
         |                       |                     v                                 |
         v                       v         +-----------------------+                     |
-  (Collection A)          (Collection B)  |      SQLite DB        |                     |
-letterboxd_personal       tmdb_synopsis   | (oscars_nominations)  |                     |
-  (User Diary/Taste)     (Factual Enriched) +-----------------------+                    |
+  (Collection A)        (Collection B)    |      SQLite DB        |                     |
+letterboxd_personal     tmdb_synopsis     | (oscars_nominations)  |                     |
+  (User Diary/Taste)   (Factual Enriched) +-----------------------+                     |
                                                                                         |
                     +-------------------------------------------------------------------+
                     |
@@ -52,13 +52,13 @@ letterboxd_personal       tmdb_synopsis   | (oscars_nominations)  |             
          +--------------------+                  +--------------------+
                     |
                     v
-    [ Human-in-the-Loop Interrupt ]
+    [ Human-in-the-Loop Interrupt to update TMDB watchlist ]
  (Gated write execution awaiting UI signal)
 ```
 
 ---
 
-## ⚡ Core Engineering Highlights
+##  Core Engineering Highlights
 
 ### 1. Multi-Tool Agentic Routing & Graph Orchestration
 Built on **LangGraph (`StateGraph`)** using message state accumulation (`add_messages`) and persistent thread checkpointing (`SqliteSaver`):
