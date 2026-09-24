@@ -13,7 +13,7 @@
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 ```text
                                   +---------------------------------------+
@@ -116,7 +116,7 @@ Standard multi-LLM workflows risk leaking internal chain-of-thought or raw SQL i
 
 ---
 
-## 🚦 CI/CD Pipeline & Automated Model Evaluation Gates
+## CI/CD Pipeline & Automated Model Evaluation Gates
 
 To prevent model drift and prompt regressions, KinoAgent integrates a **Model Evaluation Gate** directly into GitHub Actions:
 
@@ -151,7 +151,7 @@ git push / PR
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Domain | Technologies |
 |---|---|
@@ -165,7 +165,7 @@ git push / PR
 
 ---
 
-## 🔬 Systems Engineering Case Study: Memory Optimization & Cloud OOM
+##  Systems Engineering Case Study: Memory Optimization & Cloud OOM
 
 During cloud deployment to Render's free tier (512 MB RAM ceiling), KinoAgent encountered an immediate Out-Of-Memory (OOM) kernel kill:
 
@@ -186,7 +186,7 @@ During cloud deployment to Render's free tier (512 MB RAM ceiling), KinoAgent en
 
 ---
 
-## 💻 Local Setup & Development
+##  Local Setup & Development
 
 ### 1. Clone & Setup Virtual Environment
 ```bash
@@ -228,8 +228,7 @@ docker run -p 8501:8501 -p 8000:8000 --env-file .env kinoagent:latest
 
 ---
 
-## 📈 Roadmap
+##  Roadmap
 
 - [ ] Transition vector embedding pipeline to lightweight hosted API embeddings to maintain `<200 MB` container footprint.
-- [ ] Implement self-correcting SQL execution retry loop with database feedback.
-- [ ] Add composite recommendation subgraph with multi-step candidate filtering and re-ranking.
+- [ ] Improved tool calling and routing.
